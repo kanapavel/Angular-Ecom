@@ -1,0 +1,77 @@
+<app-header-langage/>
+<app-navbar-one/>
+<app-navbar-two/>
+<section class="px-20 mt-14 max-sm:px-6">
+    <div class="flex items-center max-md:flex-col">
+        <div class="w-130 px-4 max-md:min-w-full max-md:mb-4 max-sm:w-full max-sm:px-0">
+            <h1 class="text-ld font-semibold mb-6 max-sm:text-ls">The Future of Grocery Delivery:</h1>
+            <p class="text-lg text-gray-ligth font-medium">
+                By powering the future of grocery with our retail partners,
+                 we give everyone access to the food they love and more time to enjoy it together.
+            </p>
+        </div>
+        <div class="px-4 max-md:px-0">
+            <img class="rounded-md" src="assets/img-about-us/about-img.jpg" alt="">
+        </div>
+    </div>
+</section>
+<section class="px-20 mt-10 max-sm:px-6">
+    <div class="mb-5">
+        <h2 class="text-xl font-semibold">Ready to get started?</h2>
+    </div>
+    <div class="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <div *ngFor="let item of data" class="p-8 bg-grays-100 rounded-lg">
+            <div class="mb-4">
+                <img [src]="item.img" alt="">
+            </div>
+            <h4 class="text-xl font-semibold mb-4">{{item.title}}</h4>
+            <p class="text-gray-ligth mb-9 font-medium">{{item.description}}</p>
+            <a href="" class="py-3.5 px-4 mb-8 bg-dark-blue text-whites rounded-lg hover:bg-blacks font-semibold">{{item.boutton}}</a>
+        </div>
+    </div>
+    <div class="mt-8 mb-20">
+        <p class="font-bold text-gray-ligth">For assistance using Freshcart services, please visit our <a href="" class="text-greens-800 hover:text-green-hover">Help Center</a></p>
+    </div>
+</section>
+<section class="min-h-130 px-20 py-24 bg-green-pal max-sm:px-6">
+    <div class="text-whites px-4 w-80 mb-20 ">
+        <h2 class="mb-4 text-ld font-bold">Trusted by retailers. Loved by customers.</h2>
+        <p class="mb-4">We give everyone access to the food they love and more time to enjoy it together.</p>
+    </div>
+    <div class="flex font-bold text-whites max-md:grid max-md:grid-cols-2">
+        <div class="px-4 w-56 max-sm:w-full">
+            <h3 class="text-2xl max-sm:text-ls">500k</h3>
+            <span>Shoppers</span>
+        </div>
+        <div class="px-4 w-56 max-sm:w-full">
+            <h3 class="text-2xl max-sm:text-ls">4,500+</h3>
+            <span>Cities</span>
+        </div>
+        <div class="px-4 w-56 max-sm:w-full">
+            <h3 class="text-2xl max-sm:text-ls">40k+</h3>
+            <span>Stores</span>
+        </div>
+        <div class="px-4 w-56 max-sm:w-full">
+            <h3 class="text-2xl max-sm:text-ls">650+</h3>
+            <span>Retail Brands</span>
+        </div>
+    </div>
+</section>
+<section class="px-20 mb-24 max-sm:px-6">
+    <div class="my-14">
+        <h2 class="font-semibold text-xl">Our Leadership</h2>
+    </div>
+    <div class="grid grid-cols-3 gap-6 max-sm:grid-cols-2">
+        <div *ngFor="let personel of personnel" class="bg-grays-100 rounded-lg">
+            <div class="p-6 text-center">
+                <h5 class="font-semibold">{{personel.name}}</h5>
+                <small class="text-small">{{personel.post}}</small>
+            </div>
+            <div>
+                <img [src]="personel.img" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer/>

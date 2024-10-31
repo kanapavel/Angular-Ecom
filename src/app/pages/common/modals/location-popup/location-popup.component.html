@@ -1,0 +1,35 @@
+<!-- popup -->
+<div *ngIf="showModal" class="bg-modals" (click)="onCloseModalOusideClick($event)">
+    <div class="bg-modals-inner min-h-128 w-128">
+        <div class="flex justify-between items-baseline">
+            <div>
+                <h5 class="text-lg font-bold text-blacks">Choose your Delivery Location</h5>
+                <p class="text-small text-grays-800">Enter your address and we will specify the offer you area.</p>
+            </div>
+            <button (click)="this.onClose.emit()" class="btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-gray-ligth hover:stroke-blacks">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div>
+            <form action="#">
+                <input class="boutton p-2 w-full my-5 search" type="search" placeholder="Search your area">
+            </form>
+        </div>
+        <div class="center-items mb-2">
+            <p class="text-blacks text-base font-bold">Select Location</p>
+            <button class="boutton px-2 py-1 font-normal text-gray-ligth hover:bg-grays-300 hover:border-grays-300">Clear All</button>
+        </div>
+        <div>
+            <ul *ngFor="let area of area" class="first:bg-grays-100">
+                <li class="w-full hover:bg-grays-100 focus-within:bg-grays-100">
+                    <a class="center-items px-2 py-3 border-b" href="#">
+                        <span>{{area.name | titlecase}}</span>
+                        <span>Min:${{area.price}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

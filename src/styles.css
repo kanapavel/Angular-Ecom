@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .center-items{
+        @apply flex place-content-between items-center;
+    }
+    .full-w-h{
+        @apply w-full h-full;
+    }
+    .icon-style{
+        @apply flex items-center place-content-center absolute top-0 left-3.5 bg-green-pal text-whites text-bigSmall w-4 h-4 rounded-full;
+    }
+    .boutton{
+        @apply outline-none border  rounded-lg text-base font-bold p-2;
+    }
+    .search{
+        @apply font-normal border-grays-200 focus:border-greens-300 focus:ring-4 focus:ring-greens-200  placeholder:text-base;
+    }
+    .input-style{
+        @apply search w-full h-12 border boutton;
+    }
+    .label-style{
+        @apply flex text-base mb-2;
+    }
+    .bg-modals{
+        @apply fixed inset-0 bg-sombre bg-opacity-45 flex justify-center items-center z-50;
+    }
+    .bg-modals-inner{
+        @apply bg-whites border rounded-xl p-6 animate-slide-in;
+    }
+    .btn-close{
+        @apply  p-1 focus:border-greens-300 rounded-lg focus:ring-4 focus:ring-greens-200  transition ease-in-out duration-200
+    }
+    .svg-style{
+        @apply stroke-gray-ligth hover:stroke-blacks transition ease-in-out duration-200;
+    }
+    .nav-links{
+        @apply flex h-full w-full rounded-md hover:bg-grays-100 text-base text-blacks p-1;
+    }
+    .ul-nav{
+        @apply absolute bg-whites border border-grays-100 shadow-sm rounded-xl p-2 animate-slide-links;
+    }
+}

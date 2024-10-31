@@ -1,0 +1,46 @@
+<nav class=" shadow-md px-20 h-14 max-sm:px-6">
+    <div class="flex justify-between items-center h-full max-sm:flex-col max-sm:justify-center">
+        <div>
+            <a routerLink="/">
+                <img src="assets/freshcart-logo.svg" alt="">
+            </a>
+        </div>
+        <div>
+            <span>Already have an account? <a routerLink="/signin" class="text-greens-800">Sign in</a></span>
+        </div>
+    </div>
+</nav>
+<section class="flex items-center min-h-130 my-auto">
+    <div class="w-3/4 h-full m-auto">
+        <div class="flex items-center h-full max-lg:flex-row-reverse max-md:flex-col-reverse max-md:my-10">
+            <div class="w-96 h-96 px-4 bg-[url('assets/fp-g.svg')] bg-center bg-cover max-md:bg-contain max-md:bg-no-repeat max-sm:px-0 max-sm:w-full">
+                <!-- <img src="assets/fp-g.svg" alt=""> -->
+            </div>
+            <div class="w-96 ml-24 max-lg:ml-0 max-md:w-full">
+                <div class="mb-10">
+                    <h1 class="text-ls font-bold mb-1 max-sm:text-xl">Forgot your password?</h1>
+                    <p class="text-gray-ligth font-medium mb-4">
+                        Please enter the email address associated with your account and We will email you a link to reset your password.
+                    </p>
+                </div>
+                <form [formGroup]="applyForms" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+                    <div>
+                        <input class="input-style" type="email" placeholder="Email" formControlName="email">
+                        <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('required')" class="text-reds text-small">
+                            Please enter email
+                        </span>
+                        <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('email')" class="text-reds text-small">
+                            Please enter valid email
+                        </span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <button type="submit" class="boutton w-full text-whites py-2.5 px-4 bg-greens-800 hover:bg-green-hover">Sign In</button>
+                        <a routerLink="/" class="flex justify-center boutton w-full  py-2.5 px-4 bg-grays-200 hover:bg-gray-ligth">Back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer />
