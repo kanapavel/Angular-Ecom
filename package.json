@@ -21,6 +21,7 @@
     "apexcharts": "^4.0.0",
     "chart.js": "^4.4.6",
     "flowbite": "^2.5.2",
+    "http-proxy-middleware": "^3.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
