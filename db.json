@@ -1,0 +1,1013 @@
+{
+    "products":[
+        {
+            "id":1,
+            "img":[
+                "assets/products/product-img-1.png",
+                "assets/products/product1-img-2.png",
+                "assets/products/product1-img-3.png",
+                "assets/products/product1-img-4.png"
+            ],
+            "categorie":"Snack & Munchies",
+            "nom":"Haldiram's Sev Bhujia",
+            "note":4,
+            "nbrAvis":149,
+            "prix_unitaire":24,
+            "prix_reduit":18,
+            "etiquette":"Sale",
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-5.jpg",
+                    "nom":"kana",
+                    "data":"12/02/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-4.jpg",
+                    "nom":"Shankar Subbaraman",
+                    "data":"01/09/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[
+                        "assets/products/product-img-1.png",
+                        "assets/products/product-img-2.png",
+                        "assets/products/product-img-3.png"
+                    ],
+                    "nbre_etoile":5,
+                    "isVerified": false
+                },
+                {
+                    "id_comment": 3,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"Robert Thomas",
+                    "data":"02/01/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":3,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":2,
+            "img":[
+                "assets/products/product-img-2.png",
+                "assets/products/product2-img-2.png",
+                "assets/products/product2-img-3.png",
+                "assets/products/product2-img-4.png"
+            ],
+            "categorie":"Bakery & Biscuits",
+            "nom":"NutriChoice Digestive",
+            "note":4,
+            "nbrAvis":25,
+            "prix_reduit":24,
+            "etiquette":"14%",
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"pavel",
+                    "data":"01/12/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-3.jpg",
+                    "nom":"Sandra Langevin",
+                    "data":"01/12/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 3,
+                    "profil_img":"assets/avatars/avatar-4.jpg",
+                    "nom":"Barbara Tay",
+                    "data":"01/01/2022",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[
+                        "assets/products/product-img-1.png",
+                        "assets/products/product-img-2.png",
+                        "assets/products/product-img-3.png"
+                    ],
+                    "nbre_etoile":5,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 4,
+                    "profil_img":"assets/avatars/avatar-5.jpg",
+                    "nom":"pavel",
+                    "data":"10/30/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": false
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":3,
+            "img":[
+                "assets/products/product-img-3.png",
+                "assets/products/product3-img-2.png",
+                "assets/products/product3-img-3.png",
+                "assets/products/product3-img-4.png"
+            ],
+            "categorie":"Bakery & Biscuits",
+            "nom":"Cadbury 5 Star Chocolate",
+            "note":5,
+            "nbrAvis":469,
+            "prix_unitaire":35,
+            "prix_reduit":32,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-1.jpg",
+                    "nom":"darios",
+                    "data":"01/05/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-3.jpg",
+                    "nom":"franck",
+                    "data":"01/05/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[
+                        "assets/products/product-img-1.png",
+                        "assets/products/product-img-2.png",
+                        "assets/products/product-img-3.png"
+                    ],
+                    "nbre_etoile":5,
+                    "isVerified": false
+                },
+                {
+                    "id_comment": 3,
+                    "profil_img":"assets/avatars/avatar-5.jpg",
+                    "nom":"jean arnaud",
+                    "data":"01/09/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":3,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":4,
+            "img":[
+                "assets/products/product-img-4.png",
+                "assets/products/product4-img-2.png",
+                "assets/products/product4-img-3.png",
+                "assets/products/product4-img-4.png"
+            ],
+            "categorie":"Snack & Munchies",
+            "nom":"Onion Flavour Potato",
+            "note":3,
+            "nbrAvis":456,
+            "prix_unitaire":5,
+            "prix_reduit":3,
+            "etiquette":"hot",
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-1.jpg",
+                    "nom":"anorld",
+                    "data":"02/23/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-4.jpg",
+                    "nom":"bertis lie",
+                    "data":"06/02/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":5,
+            "img":[
+                "assets/products/product-img-5.png",
+                "assets/products/product5-img-2.png",
+                "assets/products/product5-img-3.png",
+                "assets/products/product5-img-4.png"
+            ],
+            "categorie":"Instant Food",
+            "nom":"Salted Instant Popcorn",
+            "note":4,
+            "nbrAvis":39,
+            "prix_unitaire":18,
+            "prix_reduit":13,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"jiokeng",
+                    "data":"01/12/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":5,
+                    "isVerified": false
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-3.jpg",
+                    "nom":"barbara tay",
+                    "data":"01/12/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 3,
+                    "profil_img":"assets/avatars/avatar-5.jpg",
+                    "nom":"robert thomas",
+                    "data":"01/12/2022",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":3,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":6,
+            "img":[
+                "assets/products/product-img-6.png",
+                "assets/products/product6-img-2.png",
+                "assets/products/product6-img-3.png",
+                "assets/products/product6-img-4.png"
+            ],
+            "categorie":"Dairy, Bread & Eggs",
+            "nom":"Blueberry Greek Yogurt",
+            "note":4,
+            "nbrAvis":189,
+            "prix_unitaire":24,
+            "prix_reduit":18,
+            "etiquette":"Sale",
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-4.jpg",
+                    "nom":"leopold",
+                    "data":"12/06/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[
+                        "assets/products/product-img-1.png",
+                        "assets/products/product-img-2.png",
+                        "assets/products/product-img-3.png"
+                    ],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"lea sanchess",
+                    "data":"11/06/2022",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 3,
+                    "profil_img":"assets/avatars/avatar-3.jpg",
+                    "nom":"tom carlos",
+                    "data":"01/06/2021",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":7,
+            "img":[
+                "assets/products/product-img-7.png",
+                "assets/products/product7-img-2.png",
+                "assets/products/product7-img-3.png",
+                "assets/products/product7-img-4.png"
+            ],
+            "categorie":"Dairy, Bread & Eggs",
+            "nom":"Britannia Cheese Slices",
+            "note":5,
+            "nbrAvis":345,
+            "prix_reduit":24,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-5.jpg",
+                    "nom":"kana",
+                    "data":"07/17/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":5,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-4.jpg",
+                    "nom":"elisab toa",
+                    "data":"05/07/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":3,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 3,
+                    "profil_img":"assets/avatars/avatar-3.jpg",
+                    "nom":"kamga fopa",
+                    "data":"04/14/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": false
+                },
+                {
+                    "id_comment": 4,
+                    "profil_img":"assets/avatars/avatar-1.jpg",
+                    "nom":"francine noah",
+                    "data":"01/07/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":5,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":8,
+            "img":[
+                "assets/products/product-img-8.png",
+                "assets/products/product8-img-2.png",
+                "assets/products/product8-img-3.png",
+                "assets/products/product8-img-4.png"
+            ],
+            "categorie":"Instant Food",
+            "nom":"Kellogg's Original Cereals",
+            "note":4,
+            "nbrAvis":90,
+            "prix_unitaire":35,
+            "prix_reduit":32,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-4.jpg",
+                    "nom":"joel franck",
+                    "data":"12/10/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-5.jpg",
+                    "nom":"ronis",
+                    "data":"04/11/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[
+                        "assets/products/product-img-1.png",
+                        "assets/products/product-img-2.png",
+                        "assets/products/product-img-3.png"
+                    ],
+                    "nbre_etoile":5,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":9,
+            "img":[
+                "assets/products/product-img-9.png",
+                "assets/products/product9-img-2.png",
+                "assets/products/product9-img-3.png",
+                "assets/products/product9-img-4.png"
+            ],
+            "categorie":"Snack & Munchies",
+            "nom":"Slurrp Millet Chocolate",
+            "note":4,
+            "nbrAvis":67,
+            "prix_unitaire":5,
+            "prix_reduit":3,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-5.jpg",
+                    "nom":"freddy",
+                    "data":"10/12/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"jeanne mah",
+                    "data":"12/02/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":5,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":10,
+            "img":[
+                "assets/products/product-img-10.png",
+                "assets/products/product10-img-2.png",
+                "assets/products/product10-img-3.png",
+                "assets/products/product10-img-4.png"
+            ],
+            "categorie":"Dairy, Bread & Eggs",
+            "nom":"Amul Butter - 500 g",
+            "note":3,
+            "nbrAvis":89,
+            "prix_unitaire":18,
+            "prix_reduit":13,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-1.jpg",
+                    "nom":"elsa grace",
+                    "data":"11/14/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-4.jpg",
+                    "nom":"gildas marc",
+                    "data":"11/12/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":3,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 3,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"gilbert foe",
+                    "data":"10/21/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": false
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":11,
+            "img":[
+                "assets/products/product-img-11.png",
+                "assets/products/product11-img-2.png",
+                "assets/products/product11-img-3.png",
+                "assets/products/product11-img-4.png"
+            ],
+            "categorie":"Tea, Coffee & Drinks",
+            "nom":"Roast Ground Coffee",
+            "note":4,
+            "nbrAvis":149,
+            "prix_unitaire":18,
+            "prix_reduit":13,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"sidonie",
+                    "data":"02/12/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[
+                        "assets/products/product-img-1.png",
+                        "assets/products/product-img-2.png",
+                        "assets/products/product-img-3.png"
+                    ],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-3.jpg",
+                    "nom":"silvie anne",
+                    "data":"03/11/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":5,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":12,
+            "img":[
+                "assets/products/product-img-12.png",
+                "assets/products/product12-img-2.png",
+                "assets/products/product12-img-3.png",
+                "assets/products/product12-img-4.png"
+            ],
+            "categorie":"Fruits & Vegetables",
+            "nom":"Crushed Tomatoes",
+            "note":4,
+            "nbrAvis":49,
+            "prix_unitaire":18,
+            "prix_reduit":13,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-1.jpg",
+                    "nom":"audrey toe",
+                    "data":"02/22/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":5,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 2,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"kouna jeanne",
+                    "data":"09/02/2023",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 3,
+                    "profil_img":"assets/avatars/avatar-5.jpg",
+                    "nom":"kana",
+                    "data":"11/12/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[
+                        "assets/products/product-img-1.png",
+                        "assets/products/product-img-2.png",
+                        "assets/products/product-img-3.png"
+                    ],
+                    "nbre_etoile":5,
+                    "isVerified": false
+                },
+                {
+                    "id_comment": 4,
+                    "profil_img":"assets/avatars/avatar-4.jpg",
+                    "nom":"kemo joel",
+                    "data":"01/02/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        },
+        {
+            "id":13,
+            "img":[
+                "assets/products/product-img-13.jpg",
+                "assets/products/product13-img-2.png",
+                "assets/products/product13-img-3.png",
+                "assets/products/product13-img-4.png"
+            ],
+            "categorie":"Fruits & Vegetables",
+            "nom":"Golden Pineapple",
+            "note":4,
+            "nbrAvis":189,
+            "prix_unitaire":18,
+            "prix_reduit":13,
+            "remise":"10%",
+            "poids":["250g","500g","1kg"],
+            "stock":true,
+            "type":"fruit",
+            "quantite":1,
+            "commentaires":[
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-1.jpg",
+                    "nom":"octavia",
+                    "data":"01/03/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":5,
+                    "isVerified": true
+                },
+                {
+                    "id_comment": 1,
+                    "profil_img":"assets/avatars/avatar-2.jpg",
+                    "nom":"anne blance",
+                    "data":"02/19/2024",
+                    "titre":"Need to recheck the weight at delivery point",
+                    "message":"Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open package, there is a possibility of pilferage in between. FreshCart sends the veggies and fruits through sealed plastic covers and Barcode on the weight etc. .",
+                    "image_associer":[],
+                    "nbre_etoile":4,
+                    "isVerified": true
+                }
+            ],
+            "detail_produits": {
+                "valeur_nutritive":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, divers habitant ornare ac rhoncus.",
+                "conseils_stokage":"Nisi, tellus iaculis urna bibendum en lacus, entier. Id imperdiet vitae varius sed magnis eu nisi nunc sit.",
+                "unite":3,
+                "vendeur":"DMart Pvt. LTD",
+                "clause_non_responsabilite":"L'image présentée est une représentation et peut légèrement différer du produit réel. Tous les efforts sont faits pour maintenir l'exactitude de toutes les informations affichées."
+            },
+            "informations":{
+                "poids":"1000 grammes",
+                "type_ingredient":"Végétarien",
+                "marque":"D-mart",
+                "quantite_du_paquet": 1,
+                "formulaire":"Larry l'oiseau",
+                "fabriquant":"D-mart",
+                "qte_net":"340,0 grammes",
+                "dimension_produit":"9,6 x 7,49 x 18,49 cm",
+                "ASIN":"SB0025UJ75W",
+                "classement_vente":"#2 dans Fruits",
+                "date_disponibilite":"30/04/2024",
+                "poids_de_article":"500g",
+                "nom_generique":"Banane Robusta"
+            }
+        }
+    ]
+}

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgFor, NgStyle } from '@angular/common';
-import { initFlowbite } from 'flowbite';
 
 
 @Component({
@@ -13,7 +12,6 @@ import { initFlowbite } from 'flowbite';
 export class SectionOneComponent {
 
   constructor(){}
-
 
    data = [
     {
@@ -43,5 +41,7 @@ export class SectionOneComponent {
       description:'Free Shipping to First-Time Customers Only, After promotion and discounts are applied.',
     },
    ]
+
+  
 
 }

@@ -1,0 +1,45 @@
+<div class="flex border-b pb-6 mb-6" *ngFor="let comment of data.commentaires">
+    <div>
+        <img [src]="comment.profil_img" alt="photo-profil" class="rounded-full w-28 max-md:max-w-12">
+    </div>
+    <div class="ml-5">
+        <h6 class="font-bold mb-1">{{comment.nom | titlecase}}</h6>
+        <p class="mb-4 text-small">
+            <span>{{comment.data |date:'longDate'}} </span>
+            @if (comment.isVerified) {
+                <span class="text-greens-800 font-bold ml-2">Verified Purchase</span>
+            }@else {
+                <span class="text-reds font-bold ml-2">Unverified Purchase</span>
+            }
+        </p>
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+            <p-rating
+            class="text-yellow-300 flex"
+                [(ngModel)]="comment.nbre_etoile"
+                [readonly]="true"
+                iconCancelClass="hidden"
+            ></p-rating>
+            <span class="font-bold">{{comment.titre}}</span>
+        </div>
+        <p class="mb-4 text-gray-ligth font-semibold">{{comment.message}}</p>
+        @if (comment.image_associer.length !== 0 ) {
+            <div  class="flex gap-3">
+                <img *ngFor="let img of comment.image_associer" [src]="img" alt="product" class="w-11 border-2 border-grays-300">
+            </div>
+        }
+        <div class="flex items-center justify-end gap-6 text-gray-ligth mt-4">
+            <a href="#" class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 stroke-gray-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                </svg>
+                Helpful                  
+            </a>
+            <a href="#" class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 stroke-gray-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                </svg>
+                Report abuse                  
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,46 +1,67 @@
-import { CurrencyPipe, NgIf, NgStyle } from '@angular/common';
+import { AsyncPipe, CurrencyPipe, NgClass, NgIf, NgStyle, SlicePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { CountDownComponent } from './count-down/count-down.component';
 import { initFlowbite } from 'flowbite';
+import { ProductsService } from '../../../../../core/services/products.service';
+import { products } from '../../../../../core/interfaces/products';
+import { CartService } from '../../../../../core/services/cart.service';
+import { ViewModalComponent } from '../../../../../core/components/modals/viewModal/view-modal.component';
+import { RouterModule } from '@angular/router';
+import { RatingModule } from 'primeng/rating';
+import { FormsModule } from '@angular/forms';
+import { FavoriesService } from '../../../../../core/services/favories.service';
 
 @Component({
   selector: 'app-best-sell',
   standalone: true,
-  imports: [NgStyle,NgFor,CurrencyPipe,NgIf,CountDownComponent],
+  imports: [
+    NgStyle,NgFor,CurrencyPipe,NgIf,CountDownComponent,
+    AsyncPipe,SlicePipe,NgClass,ViewModalComponent,RouterModule,
+    RatingModule,FormsModule
+  ],
   templateUrl: './best-sell.component.html',
   styleUrl: './best-sell.component.css'
 })
-export class BestSellComponent {
+export class BestSellComponent implements OnInit{
+  isAdded = false;
+  canShowModal = false;
+  produits:products[]=[]
+  constructor(private productService:ProductsService,private cartService:CartService,private favorieService:FavoriesService){}
 
+  Products!:products 
+  ngOnInit(): void {
+    initFlowbite();
+    this.productService.getAllProducts().subscribe(res=>{
+      this.produits = res
+    })
+  }
+  toggleAddCart(product:products){
+    if(this.isInCart(product)){
+      this.cartService.removeCartItem(product)
+    }else{
+      this.cartService.addtoCart(product)
+    }
+  }
 
-  data = [
-    {
-      id:20,
-      img:'assets/products/product-img-11.png',
-      name1:'Tea, Coffee & Drinks',
-      name2:'Roast Ground Coffee',
-      ranting:4.5,
-      price:18,
-      reduction:13,
-  },
-  {
-      id:21,
-      img:'assets/products/product-img-12.png',
-      name1:'Fruits & Vegetables',
-      name2:'Crushed Tomatoes',
-      ranting:4.5,
-      price:18,
-      reduction:13,
-  },
-  {
-      id:22,
-      img:'assets/products/product-img-13.jpg',
-      name1:'Fruits & Vegetables',
-      name2:'Golden Pineapple',
-      ranting:4.5,
-      price:18,
-      reduction:13,
-  },
-  ]
+  isInCart(product:products):boolean{
+    return this.cartService.isInCart(product)
+  }
+
+  toggleAddFavorie(product:products){
+    if(this.isInFavorie(product)){
+      this.favorieService.removeFavorieItem(product)
+    }else{
+      this.favorieService.addtoFavorie(product)
+    }
+  }
+
+  isInFavorie(product:products):boolean{
+    return this.favorieService.isInfavorie(product)
+  }
+
+  view(product:products){
+    this.Products = product
+    this.canShowModal =true
+  }
 }

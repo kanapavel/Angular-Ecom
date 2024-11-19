@@ -44,3 +44,17 @@
         @apply absolute bg-whites border border-grays-100 shadow-sm rounded-xl p-2 animate-slide-links;
     }
 }
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.p-rating-cancel-item{
+    display: none;
+}
+.p-hidden-accessible{
+    display: none;
+}
+.p-rating{
+    @apply flex gap-1
+}

@@ -5,67 +5,33 @@ import { LocationPopupComponent } from "../../modals/location-popup/location-pop
 import { SignUpPopupComponent } from "../../modals/sign-up-popup/sign-up-popup.component";
 import { RouterLink, RouterModule } from '@angular/router';
 import { initFlowbite } from 'flowbite';
+import { ShopCartComponent } from "./shop-cart/shop-cart.component";
+import { FavoriesService } from '../../../services/favories.service';
 
 @Component({
   selector: 'app-navbar-one',
   standalone: true,
   imports: [
-    NgFor,NgIf ,
+    NgFor, NgIf,
     TitleCasePipe, CurrencyPipe,
     NgClass, CommonModule, LocationPopupComponent,
-     SignUpPopupComponent,RouterLink,RouterModule
-  ],
+    SignUpPopupComponent, RouterLink, RouterModule,
+    ShopCartComponent
+],
   templateUrl: './navbar-one.component.html',
   styleUrl: './navbar-one.component.css'
 })
 export class NavbarOneComponent implements OnInit {
   canShowModal = false;
   canShowSignInModal = false;
+  totalItemsFavorie:number = 0
 
-  constructor(){}
+  constructor(private favorieService:FavoriesService){
+    this.favorieService.getProducts().subscribe(res=>{
+      this.totalItemsFavorie = res.length
+    })
+  }
   ngOnInit(): void {
     initFlowbite();
   }
-
-  data=[
-    {
-      id:1,
-      img:'assets/products/product-img-1.png',
-      name:'Haldiram\'s Sev Bhujia',
-      reduction:5,
-      weigth:'.98 / Ib'
-    },
-    {
-      id:2,
-      img:'assets/products/product-img-2.png',
-      name:'NutriChoice Digestive',
-      price:26,
-      reduction:20,
-      weigth:'250g'
-    },
-    {
-      id:3,
-      img:'assets/products/product-img-3.png',
-      name:'Cadbury 5 Star Chocolate',
-      price:20,
-      reduction:15,
-      weigth:'1kg'
-    },
-    {
-      id:4,
-      img:'assets/products/product-img-4.png',
-      name:'Onion Flavour Potato',
-      price:20,
-      reduction:15,
-      weigth:'250g'
-    },
-    {
-      id:5,
-      img:'assets/products/product-img-5.png',
-      name:'Salted Instant Popcorn',
-      price:20,
-      reduction:15,
-      weigth:'100g'
-    },
-  ]
 }

@@ -1,0 +1,125 @@
+<div class="my-8">
+    <div class="mb-4">
+        <h4 class="text-xl font-bold">Details</h4>
+    </div>   
+        
+    <div class="relative flex gap-10 overflow-x-auto sm:rounded-lg max-lg:flex-col">
+        <div class="w-1/2 max-lg:w-full">
+            <table class="min-w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <tbody>
+                    <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Weigth
+                        </th>
+                        <td class="px-6 py-4">
+                            {{data.informations.poids_de_article}}
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Ingredient Type
+                        </th>
+                        <td class="px-6 py-4">
+                            {{data.informations.type_ingredient}}
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Brand
+                        </th>
+                        <td class="px-6 py-4">
+                            {{data.informations.marque}}
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Item Package Quantity
+                        </th>
+                        <td class="px-6 py-4">
+                            {{data.informations.quantite_du_paquet}}
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Form
+                        </th>
+                        <td class="px-6 py-4">
+                            {{data.informations.formulaire}}
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                        <th scope="row" class="even:bg-whites  px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Manufacturer
+                        </th>
+                        <td class="px-6 py-4">
+                            {{data.informations.fabriquant}}
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Net Quantity
+                        </th>
+                        <td class="px-6 py-4">
+                            {{data.informations.qte_net}}
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                        <th scope="row" class="even:bg-whites  px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Product Dimensions
+                        </th>
+                        <td class="px-6 py-4">
+                            {{data.informations.dimension_produit}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="w-1/2 max-lg:w-full max-lg:mt-5">
+            <table class=" min-w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <tbody>
+                        <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                ASIN
+                            </th>
+                            <td class="px-6 py-4">
+                                {{data.informations.ASIN}}
+                            </td>
+                        </tr>
+                        <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Best Sellers Rank
+                            </th>
+                            <td class="px-6 py-4">
+                                {{data.informations.classement_vente}}
+                            </td>
+                        </tr>
+                        <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Date First Aviable
+                            </th>
+                            <td class="px-6 py-4">
+                                {{data.informations.date_disponibilite}}
+                            </td>
+                        </tr>
+                        <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Item Weight
+                            </th>
+                            <td class="px-6 py-4">
+                                {{data.informations.poids_de_article}}
+                            </td>
+                        </tr>
+                        <tr class="odd:bg-grays-100 even:bg-whites border-b dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Generic Name
+                            </th>
+                            <td class="px-6 py-4">
+                                {{data.informations.nom_generique}}
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
