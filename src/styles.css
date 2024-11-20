@@ -55,6 +55,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .p-hidden-accessible{
     display: none;
 }
-.p-rating{
-    @apply flex gap-1
+.p-rating-icon{
+    @apply text-yellow-300
 }
