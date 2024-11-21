@@ -272,7 +272,7 @@
             "etiquette":"hot",
             "remise":"10%",
             "poids":["250g","500g","1kg"],
-            "stock":true,
+            "stock":false,
             "type":"fruit",
             "quantite":1,
             "commentaires":[
@@ -496,7 +496,7 @@
             "prix_reduit":24,
             "remise":"10%",
             "poids":["250g","500g","1kg"],
-            "stock":true,
+            "stock":false,
             "type":"fruit",
             "quantite":1,
             "commentaires":[
@@ -720,7 +720,7 @@
             "prix_reduit":13,
             "remise":"10%",
             "poids":["250g","500g","1kg"],
-            "stock":true,
+            "stock":false,
             "type":"fruit",
             "quantite":1,
             "commentaires":[
@@ -959,7 +959,7 @@
             "prix_reduit":13,
             "remise":"10%",
             "poids":["250g","500g","1kg"],
-            "stock":true,
+            "stock":false,
             "type":"fruit",
             "quantite":1,
             "commentaires":[
