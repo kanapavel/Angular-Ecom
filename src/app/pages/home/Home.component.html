@@ -4,7 +4,7 @@
 
 <app-section-one />
 <app-featured-section />
-<section id="section-1" (click)="goToSection('section-1')" class="mt-8 px-20 max-sm:px-6">
+<section id="section-1" class="mt-8 px-20 max-sm:px-6">
     <div>
         <h3 class="text-xl font-bold mb-5">Popular Products</h3>
     </div>
@@ -12,7 +12,7 @@
         <app-popular-products *ngFor="let products of produits |slice:0:10" [data]="products" />
     </div>
 </section>
-<section id="section-2" (click)="goToSection('section-2')" class="mt-8 px-20 max-sm:px-6">
+<section id="section-2" class="mt-8 px-20 max-sm:px-6">
     <div>
         <h3 class="text-xl font-bold mb-5">Daily Best Sells</h3>
     </div>
@@ -20,7 +20,7 @@
         <app-best-sell class="grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1"/>
     </div>
 </section>
-<section id="section-3" (click)="goToSection('section-3')" class="my-24 px-20 max-sm:px-6">
+<section id="section-3" class="my-24 px-20 max-sm:px-6">
     <div>
         <app-last-section class="grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-md:grid-cols-1"/>
     </div>
