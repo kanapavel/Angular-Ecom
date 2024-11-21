@@ -35,12 +35,11 @@ export class ReviewsComponent implements OnInit{
   chart = viewChild.required<ElementRef>('chart');
   
   ngOnInit(): void {
-    // Vérifier si item est défini
   if (this.item && this.item.commentaires) {
     for (const comment of this.item.commentaires) {
       this.nbre_commentaires[comment.nbre_etoile - 1]++;
     }
-    console.log(this.nbre_commentaires); // Vérifiez les données ici
+    console.log(this.nbre_commentaires);
   } else {
     console.warn('L\'item ou ses commentaires ne sont pas définis.');
   }
@@ -53,7 +52,7 @@ export class ReviewsComponent implements OnInit{
           {
             label:'Avis sur le produit',
             data:this.nbre_commentaires.reverse(),
-            backgroundColor: 'rgba(255, 238, 0, 1)', // Utilisez backgroundColor au lieu de fill
+            backgroundColor: 'rgba(255, 238, 0, 1)',
             borderColor: 'rgba(255, 238, 0, 1)',
             borderWidth: 1
           },
