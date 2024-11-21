@@ -4,11 +4,12 @@ import { FavoriesService } from '../../../core/services/favories.service';
 import { products } from '../../../core/interfaces/products';
 import { CurrencyPipe, NgClass, NgFor } from '@angular/common';
 import { CartService } from '../../../core/services/cart.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-wishlist',
   standalone: true,
-  imports: [CoreModule,NgFor,CurrencyPipe,NgClass],
+  imports: [CoreModule,NgFor,CurrencyPipe,NgClass,RouterModule],
   templateUrl: './wishlist.component.html',
   styleUrl: './wishlist.component.css'
 })

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AsyncPipe, CommonModule, NgFor } from '@angular/common';
 import { products } from '../../core/interfaces/products';
 import { ProductsService } from '../../core/services/products.service';
@@ -23,7 +23,7 @@ import { SectionOneComponent } from './components/first-section/section-one/sect
 ],
   templateUrl: './Home.component.html',
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit,OnDestroy{
 
     produits:products[]=[]
     constructor(private productService:ProductsService){}
@@ -32,5 +32,30 @@ export class HomeComponent implements OnInit{
       this.productService.getAllProducts().subscribe(res=>{
         this.produits = res
       })
+      window.addEventListener('popstate', this.onPopState);
+    }
+  
+    ngOnDestroy() {
+      window.removeEventListener('popstate', this.onPopState);
+    }
+  
+    goToSection(sectionId: string) {
+      // Défilement vers la section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        // Ajout de l'état à l'historique
+        history.pushState({ sectionId }, '', `#${sectionId}`);
+      }
+    }
+  
+    onPopState(event: PopStateEvent) {
+      // Vérifiez si un ID de section est dans l'état
+      if (event.state && event.state.sectionId) {
+        const element = document.getElementById(event.state.sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     }
 }

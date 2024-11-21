@@ -5,7 +5,13 @@ import { WishlistComponent } from './components/wishlist.component';
 const routes: Routes = [
   {
     path:'',
-    component:WishlistComponent
+    component:WishlistComponent,
+    children:[
+      {
+        path:'contact',
+        loadChildren:()=> import('../contact/contact.module').then(m=> m.ContactModule)
+      }
+    ]
   }
 ];
 
