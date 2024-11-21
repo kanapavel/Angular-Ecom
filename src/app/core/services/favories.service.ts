@@ -4,60 +4,61 @@ import { NotificationsService } from './notifications.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FavoriesService {
-  favorieItems:products[]=[]
+  private favorieItems: products[] = [];
+  private productList = new BehaviorSubject<products[]>([]);
+  private storageKey = 'favorieItems';
 
-  public productList = new BehaviorSubject<any>([]);
-  private storagekey = 'favorieItems'
+  constructor(private notificationService: NotificationsService) {
+    this.loadFavoritesFromStorage();
+  }
 
-  constructor(private notificationService:NotificationsService) { 
-    const storedItems = localStorage.getItem(this.storagekey);
-    if(storedItems){
-      this.favorieItems = JSON.parse(storedItems)
+  private loadFavoritesFromStorage() {
+    const storedItems = localStorage.getItem(this.storageKey);
+    if (storedItems) {
+      try {
+        this.favorieItems = JSON.parse(storedItems);
+        // Mettre à jour le BehaviorSubject avec les données chargées
+        this.productList.next(this.favorieItems);
+      } catch (error) {
+        console.error('Erreur de parsing des données depuis localStorage:', error);
+      }
     }
   }
 
-  getFavorieItem(){
-    return this.favorieItems
+  getProducts() {
+    return this.productList.asObservable(); // Exposez l'observable
   }
 
-  getProducts(){
-    return this.productList.asObservable();
+  addToFavorie(product: products) {
+    if (!this.isInFavorie(product)) {
+      this.favorieItems.push(product);
+      this.updateLocalStorage();
+      this.productList.next(this.favorieItems); // Notifiez les abonnés
+      this.notificationService.showSuccess(`${product.nom} added to favorites`);
+    }
   }
 
-  setProduct(product:products[]){
-    this.favorieItems.push(...product);
-    this.productList.next(product);
+  removeFavorieItem(product: products) {
+    this.favorieItems = this.favorieItems.filter(item => item.id !== product.id);
+    this.updateLocalStorage();
+    this.productList.next(this.favorieItems); // Notifiez les abonnés
+    this.notificationService.showSuccess(`${product.nom} removed from favorites`);
   }
 
-  addtoFavorie(product:products){
-    this.favorieItems.push(product);
-    this.productList.next(this.favorieItems);
-    this.notificationService.showSuccess(`${product.nom} added in the favorie`)
-    localStorage.setItem(this.storagekey, JSON.stringify(this.favorieItems))
+  removeAllFavorites() {
+    this.favorieItems = [];
+    this.updateLocalStorage();
+    this.productList.next(this.favorieItems); // Notifiez les abonnés
   }
 
-  removeFavorieItem(product:products){
-    product.quantite = 1
-    this.favorieItems.map((a:products, index:any)=>{
-      if(product.id === a.id){
-        this.favorieItems.splice(index,1)
-        this.notificationService.showSuccess(`${product.nom} is remove in the favorie`)
-        localStorage.setItem(this.storagekey, JSON.stringify(this.favorieItems))
-      }
-    })
-    this.productList.next(this.favorieItems)
+  isInFavorie(product: products): boolean {
+    return this.favorieItems.some(item => item.id === product.id);
   }
 
-  removeAllCart(){
-    this.favorieItems = []
-    this.productList.next(this.favorieItems)
+  private updateLocalStorage() {
+    localStorage.setItem(this.storageKey, JSON.stringify(this.favorieItems));
   }
-
-  isInfavorie(product:products):boolean{
-    return this.favorieItems.some(item => item.id === product.id)
-  }
-
 }

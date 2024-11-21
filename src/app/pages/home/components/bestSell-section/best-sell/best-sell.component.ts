@@ -52,12 +52,12 @@ export class BestSellComponent implements OnInit{
     if(this.isInFavorie(product)){
       this.favorieService.removeFavorieItem(product)
     }else{
-      this.favorieService.addtoFavorie(product)
+      this.favorieService.addToFavorie(product)
     }
   }
 
   isInFavorie(product:products):boolean{
-    return this.favorieService.isInfavorie(product)
+    return this.favorieService.isInFavorie(product)
   }
 
   view(product:products){

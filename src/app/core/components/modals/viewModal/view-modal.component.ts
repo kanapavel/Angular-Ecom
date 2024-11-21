@@ -49,12 +49,12 @@ export class ViewModalComponent{
       if(this.isInFavorie(product)){
         this.favorieService.removeFavorieItem(product)
       }else{
-        this.favorieService.addtoFavorie(product)
+        this.favorieService.addToFavorie(product)
       }
     }
   
     isInFavorie(product:products):boolean{
-      return this.favorieService.isInfavorie(product)
+      return this.favorieService.isInFavorie(product)
     }
 
     increment(product:products){
