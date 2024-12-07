@@ -1,18 +1,18 @@
 <div class="flex mt-8 max-lg:flex-col">
     <div class="w-1/3 max-lg:w-full px-4">
         <div class="mb-3">
-            <h4 class="text-xl font-bold">Customers Reviews</h4>
+            <h4 class="text-xl font-bold">{{'Customers Reviews'|translate}}</h4>
         </div>
        <canvas #chart></canvas>
     </div>
     <div class="w-2/3 px-4 max-lg:w-full max-lg:mt-5">
         <div class="mb-8 flex items-center justify-between">
-            <h4 class="text-xl font-bold">Reviews</h4>
+            <h4 class="text-xl font-bold">{{'Reviews'|translate}}</h4>
             <form>
                 <select id="reviews"
                     class="bg-whites border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-4 focus:ring-greens-300 focus:border-greens-300 block p-2.5">
-                    <option value="Top Reviews" selected>Top Reviews</option>
-                    <option value="Most Recent">Most Recent</option>
+                    <option value="Top Reviews" selected>{{'Top Reviews'|translate}}</option>
+                    <option value="Most Recent">{{'Most Recent'|translate}}</option>
                 </select>
             </form>
         </div>
@@ -21,34 +21,34 @@
             <div>
                 <button
                     class="border border-grays-200 outline-none hover:bg-gray-200 text-grays-800 font-bold px-2 py-2.5 rounded-md transition-all ease-in-out duration-300">Read
-                    More Reviews</button>
+                    {{'More Reviews'|translate}}</button>
             </div>
         </div>
 
         <div>
-            <h3 class="text-xl font-semibold mb-5">Create Review</h3>
+            <h3 class="text-xl font-semibold mb-5">{{'Create Review'|translate}}</h3>
             <div class="py-4 mb-4 border-b">
-                <h4 class="text-lg font-semibold mb-3">Overall Rating</h4>
+                <h4 class="text-lg font-semibold mb-3">{{'Overall Rating'|translate}}</h4>
                 <div>
                     <p-rating [(ngModel)]="item.note" />
                 </div>
             </div>
             <div class="py-4 mb-4 border-b">
-                <h4>Rate Features</h4>
+                <h4>{{'Rate Features'|translate}}</h4>
                 <div class="my-5">
-                    <h4 class="text-lg font-semibold mb-3">Flavor</h4>
+                    <h4 class="text-lg font-semibold mb-3">{{'Flavor'|translate}}</h4>
                     <div>
                         <p-rating [(ngModel)]="item.note" />
                     </div>
                 </div>
                 <div class="my-5">
-                    <h4 class="text-lg font-semibold mb-3">Value for money</h4>
+                    <h4 class="text-lg font-semibold mb-3">{{'Value for money'|translate}}</h4>
                     <div>
                         <p-rating [(ngModel)]="item.note" />
                     </div>
                 </div>
                 <div class="my-5">
-                    <h4 class="text-lg font-semibold mb-3">Scent</h4>
+                    <h4 class="text-lg font-semibold mb-3">{{'Scent'|translate}}</h4>
                     <div>
                         <p-rating [(ngModel)]="item.note" />
                     </div>
@@ -56,35 +56,35 @@
             </div>
             <form [formGroup]="applyForm" (ngSubmit)="onSubmit()">
                 <div class="border-b py-4 mb-4">
-                    <h5 class="text-lg mb-2 font-semibold">Add a headline</h5>
-                    <input type="text" placeholder="What's most important to know" class="input-style"
+                    <h5 class="text-lg mb-2 font-semibold">{{'Add a headline'|translate}}</h5>
+                    <input type="text" placeholder="{{'What\'s most important to know'|translate}}" class="input-style"
                         formControlName="title">
                     <span *ngIf="applyForm.get('title')?.touched && applyForm.get('title')?.hasError('required')"
                         class="text-reds text-small">
-                        Please enter title
+                        {{'Please enter title'|translate}}
                     </span>
                 </div>
                 <div class="border-b py-4 mb-4">
-                    <h5 class="text-lg mb-2 font-semibold">Add a photo or video</h5>
-                    <p class="mb-4">Shoppers find images and videos more helpful than text alone.</p>
-                    <input type="file" placeholder="What's most important to know" class="" formControlName="file">
+                    <h5 class="text-lg mb-2 font-semibold">{{'Add a photo or video'|translate}}</h5>
+                    <p class="mb-4">{{'Shoppers find images and videos more helpful than text alone'|translate}}.</p>
+                    <input type="file" placeholder="{{'What\'s most important to know'|translate}}" class="" formControlName="file">
                     <span *ngIf="applyForm.get('file')?.hasError('required')" class="text-reds text-small">
-                        Please add file
+                        {{'Please add file'|translate}}
                     </span>
                 </div>
                 <div class="border-b py-4 mb-4">
-                    <h5 class="text-lg mb-2 font-semibold">Add a written review</h5>
+                    <h5 class="text-lg mb-2 font-semibold">{{'Add a written review'|translate}}</h5>
                     <textarea class="input-style h-20" rows="4" name="comment" id="comment"
-                        placeholder="What did you like or dislike? What did you use this product for?"
+                        placeholder="{{'What did you like or dislike? What did you use this product for'|translate}}?"
                         formControlName="message"></textarea>
                     <span *ngIf="applyForm.get('message')?.touched && applyForm.get('message')?.hasError('required')"
                         class="text-reds text-small">
-                        Please enter a message
+                        {{'Please enter a message'|translate}}
                     </span>
                 </div>
                 <div class="flex justify-end">
                     <button type="submit"
-                        class="boutton text-whites py-2 px-4 bg-greens-800 hover:bg-green-hover">Submit Review</button>
+                        class="boutton text-whites py-2 px-4 bg-greens-800 hover:bg-green-hover">{{'Submit Review'|translate}}</button>
                 </div>
             </form>
         </div>

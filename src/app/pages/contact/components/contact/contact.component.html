@@ -4,75 +4,74 @@
 
 <section class="flex justify-center px-20 my-20 max-sm:px-6 max-lg:mt-6">
     <div class="w-8/12 max-lg:w-full">
-        <h1 class="text-xl mb-2 font-semibold">Retailer Inquiries</h1>
+        <h1 class="text-xl mb-2 font-semibold">{{'Retailer Inquiries'|translate}}</h1>
         <p class="text-lg text-gray-ligth font-medium mb-8">
-            This form is for retailer inquiries only. For all other customer or shopper support requests, 
-            please visit the links below this form.
+            {{'This form is for retailer inquiries only'|translate}}. {{'For all other customer or shopper support requests, please visit the links below this form.'|translate}}
         </p>
         <form action="" [formGroup]="applyForms" (ngSubmit)="onSubmit()" class="grid grid-cols-2 gap-7">
             <div class="flex flex-col">
-                <label class="label-style" for="firstname">First Name <font class="text-reds pl-1">*</font></label>
-                <input class="input-style" type="text" name="firstname" id="firstname" placeholder="Enter Your First Name" formControlName="firstname">
+                <label class="label-style" for="firstname">{{'First Name'|translate}} <font class="text-reds pl-1">*</font></label>
+                <input class="input-style" type="text" name="firstname" id="firstname" placeholder="{{'Enter Your First Name'|translate}}" formControlName="firstname">
                 <span *ngIf="applyForms.get('firstname')?.touched && applyForms.get('firstname')?.hasError('required')" class="text-reds text-small">
-                    Please enter firstname
+                    {{'Please enter firstname'|translate}}
                 </span>
                 <span *ngIf="applyForms.get('firstname')?.touched && applyForms.get('firstname')?.hasError('minlength')" class="text-reds text-small">
-                    Minimum 3 characters
+                    {{'Minimum 3 characters'|translate}}
                 </span>
             </div>
             <div class="flex flex-col">
-                <label class="label-style" for="lastname">Last Name <font class="text-reds pl-1">*</font></label>
-                <input class="input-style" type="text" name="lastname" id="lastname" placeholder="Enter Your Last Name" formControlName="lastname">
+                <label class="label-style" for="lastname">{{'Last Name'|translate}} <font class="text-reds pl-1">*</font></label>
+                <input class="input-style" type="text" name="lastname" id="lastname" placeholder="{{'Enter Your Last Name'|translate}}" formControlName="lastname">
                 <span *ngIf="applyForms.get('lastname')?.touched && applyForms.get('lastname')?.hasError('required')" class="text-reds text-small">
-                    Please enter lastname
+                    {{'Please enter lastname'|translate}}
                 </span>
                 <span *ngIf="applyForms.get('lastname')?.touched && applyForms.get('lastname')?.hasError('minlength')" class="text-reds text-small">
-                    Minimum 3 characters
+                    {{'Minimum 3 characters'|translate}}
                 </span>
             </div>
             <div class="flex flex-col col-start-1 col-end-3">
-                <label class="label-style" for="company">Company <font class="text-reds pl-1">*</font></label>
-                <input class="input-style" type="text" name="company" id="company" placeholder="Your Company" formControlName="company">
+                <label class="label-style" for="company">{{'Company'|translate}} <font class="text-reds pl-1">*</font></label>
+                <input class="input-style" type="text" name="company" id="company" placeholder="{{'Your Company'|translate}}" formControlName="company">
                 <span *ngIf="applyForms.get('company')?.touched && applyForms.get('company')?.hasError('required')" class="text-reds text-small">
-                    Please enter company
+                    {{'Please enter company'|translate}}
                 </span>
             </div>
             <div class="flex flex-col col-start-1 col-end-3">
-                <label class="label-style" for="title">Title</label>
-                <input class="input-style" type="text" name="title" id="title" placeholder="Your Title" formControlName="title">
+                <label class="label-style" for="title">{{'Title'|translate}}</label>
+                <input class="input-style" type="text" name="title" id="title" placeholder="{{'Your Title'|translate}}" formControlName="title">
                 <span *ngIf="applyForms.get('title')?.touched && applyForms.get('title')?.hasError('required')" class="text-reds text-small">
-                    Please enter title
+                    {{'Please enter title'|translate}}
                 </span>
             </div>
             <div class="flex flex-col">
-                <label class="label-style" for="email">Email <font class="text-reds pl-1">*</font></label>
-                <input class="input-style" type="email" name="email" id="email" placeholder="Enter Your Email" formControlName="email">
+                <label class="label-style" for="email">{{'Email'|translate}} <font class="text-reds pl-1">*</font></label>
+                <input class="input-style" type="email" name="email" id="email" placeholder="{{'Enter Your Email'|translate}}" formControlName="email">
                 <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('required')" class="text-reds text-small">
-                    Please enter email
+                    {{'Please enter email'|translate}}
                 </span>
                 <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('email')" class="text-reds text-small">
-                    Please enter valid email
+                    {{'Please enter valid email'|translate}}
                 </span>
             </div>
             <div class="flex flex-col">
-                <label class="label-style" for="phone">Phone</label>
-                <input class="input-style" type="tel" name="phone" id="phone" placeholder="Your Phone Number" formControlName="phone">
+                <label class="label-style" for="phone">{{'Phone'|translate}}</label>
+                <input class="input-style" type="tel" name="phone" id="phone" placeholder="{{'Your Phone Number'|translate}}" formControlName="phone">
                 <span *ngIf="applyForms.get('phone')?.touched && applyForms.get('phone')?.hasError('required')" class="text-reds text-small">
-                    Please enter phone
+                    {{'Please enter phone'|translate}}
                 </span>
                 <span *ngIf="applyForms.get('phone')?.touched && applyForms.get('phone')?.hasError('minlength')" class="text-reds text-small">
-                    minimum 9 characters
+                    {{'minimum 9 characters'|translate}}
                 </span>
             </div>
             <div class="flex flex-col col-start-1 col-end-3">
-                <label class="label-style" for="comment">Textarea</label>
-                <textarea class="input-style h-20" rows="4" name="comment" id="comment" placeholder="Additional Comments" formControlName="textarea"></textarea>
+                <label class="label-style" for="comment">{{'Textarea'|translate}}</label>
+                <textarea class="input-style h-20" rows="4" name="comment" id="comment" placeholder="{{'Additional Comments'|translate}}" formControlName="textarea"></textarea>
                 <span *ngIf="applyForms.get('textarea')?.touched && applyForms.get('textarea')?.hasError('required')" class="text-reds text-small">
-                    Please enter a message in the textarea
+                    {{'Please enter a message in the textarea'|translate}}
                 </span>
             </div>
             <div>
-                <button type="submit" class="boutton text-whites py-2 px-4 bg-greens-800 hover:bg-green-hover">Submit</button>
+                <button type="submit" class="boutton text-whites py-2 px-4 bg-greens-800 hover:bg-green-hover">{{'Submit'|translate}}</button>
             </div>
         </form>
     </div>

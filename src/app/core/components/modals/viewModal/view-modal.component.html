@@ -41,8 +41,8 @@ class="bg-modals overflow-y-auto ">
                     </div>
                 </div>
                 <div class="pl-6 max-md:mt-6 max-md:px-4">
-                    <a href="" class="flex text-greens-800 mb-4">{{item.categorie}}</a>
-                    <h2 class="flex mb-1 text-ld font-bold max-md:text-ls">{{item.nom}}</h2>
+                    <a href="" class="flex text-greens-800 mb-4">{{item.categorie|translate}}</a>
+                    <a [routerLink]="['details-product',item.id]" class="flex mb-1 text-ld font-bold max-md:text-ls hover:text-greens-800 transition-all duration-200 ease-in-out">{{item.nom|translate}}</a>
                     <div class="flex items-center gap-2 mb-2">
                         <p-rating
                         class="text-yellow-300 flex"
@@ -50,12 +50,12 @@ class="bg-modals overflow-y-auto ">
                             [readonly]="true"
                             iconCancelClass="hidden"
                         ></p-rating>
-                        <a href="" class="text-greens-800">({{item.commentaires.length}} reviews)</a>
+                        <a href="" class="text-greens-800">({{item.commentaires.length}} {{'reviews'|translate}})</a>
                     </div>
                     <div class="flex gap-3 items-center">
                         <span class="text-blacks text-xl font-bold">${{item.prix_reduit}}</span>
                         <span class="text-grays-300 text-xl font-medium line-through">${{item.prix_unitaire}}</span>
-                        <small class="text-reds text-base">{{item.remise}} Off</small>
+                        <small class="text-reds text-base">{{item.remise}} {{'Off'|translate}}</small>
                     </div>
                     <hr class="w-full h-1 my-6">
                     <div class="flex gap-3 mb-4">
@@ -87,9 +87,9 @@ class="bg-modals overflow-y-auto ">
                                 <svg class = " -ms-2 me-2 h-5 w-5 " aria-hidden = " true " xmlns = " http://www.w3.org/2000/svg " width = " 24 " height = " 24 " fill = " aucun " viewBox = " 0 0 24 24 " >       
                                     <path stroke = " currentColor " stroke-linecap = " rond " stroke-linejoin = " rond " stroke-width = " 2 " d = " M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6 " />      
                                 </svg>
-                                Add to cart
+                               {{'Add to cart'|translate}}
                             }@else{
-                                Remove to cart
+                                {{'Remove to cart'|translate}}
                             }
                         </button>
                         <button type="button" class="px-4 py-2 text-sm font-medium text-center bg-gray-100 hover:bg-gray-200   border rounded-lg focus:outline-none  focus:z-10 focus:ring-4 focus:ring-gray-600  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
@@ -113,20 +113,20 @@ class="bg-modals overflow-y-auto ">
                     <table>
                         <tbody>
                             <tr class="flex start-0">
-                                <td class="px-6 py-3 text-grays-800">Product Code:</td>
+                                <td class="px-6 py-3 text-grays-800">{{'Product Code'|translate}}:</td>
                                 <td class="px-6 py-3 text-grays-800">{{item.informations.ASIN}}</td>
                             </tr>
                             <tr class="flex start-0">
-                                <td class="px-6 py-3 text-grays-800">Availability:</td>
-                                <td class="px-6 py-3 text-grays-800">{{item.stock ? "In stock" : "Not in stock"}}</td>
+                                <td class="px-6 py-3 text-grays-800">{{'Availability'|translate}}:</td>
+                                <td class="px-6 py-3 text-grays-800">{{item.stock ? "In stock" : "Not in stock" | translate}}</td>
                             </tr>
                             <tr class="flex start-0">
-                                <td class="px-6 py-3 text-grays-800">Type:</td>
-                                <td class="px-6 py-3 text-grays-800">{{item.type | titlecase}}</td>
+                                <td class="px-6 py-3 text-grays-800">{{'Type'|translate}}:</td>
+                                <td class="px-6 py-3 text-grays-800">{{item.type | titlecase|translate}}</td>
                             </tr>
                             <tr class="flex start-0">
-                                <td class="px-6 py-3 text-grays-800">Shipping:</td>
-                                <td class="px-6 py-3 text-grays-800"> <small>01 day shipping. <span>(Free pickup today)</span></small></td>
+                                <td class="px-6 py-3 text-grays-800">{{'Shipping'|translate}}:</td>
+                                <td class="px-6 py-3 text-grays-800"> <small>{{'01 day shipping'|translate}}. <span>({{'Free pickup today'|translate}})</span></small></td>
                             </tr>
                         </tbody>
                     </table>

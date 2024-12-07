@@ -5,7 +5,10 @@ import { DashbordComponent } from './components/dashboard/dashbord.component';
 const routes: Routes = [
   {
     path:'',
-    component:DashbordComponent
+    component:DashbordComponent,
+    children:[
+      
+    ]
   }
 ];
 

@@ -9,13 +9,12 @@ import { AsyncPipe,SlicePipe } from '@angular/common';
 
 import { CoreModule } from '../../../core/core.module';
 import { PopularProductsComponent } from '../../home/components/popular-products/popular-products/popular-products.component';
-import { map, Observable } from 'rxjs';
-import { CartService } from '../../../core/services/cart.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [CoreModule,RouterModule,NgFor,NgIf,PopularProductsComponent,AsyncPipe,SlicePipe],
+  imports: [CoreModule,RouterModule,NgFor,NgIf,PopularProductsComponent,AsyncPipe,SlicePipe,TranslatePipe],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })

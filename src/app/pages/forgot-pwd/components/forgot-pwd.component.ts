@@ -3,11 +3,12 @@ import { FormGroup, ReactiveFormsModule, Validators, FormControl } from '@angula
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { CoreModule } from '../../../core/core.module';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-forgot-pwd',
   standalone: true,
-  imports: [CoreModule,NgIf,ReactiveFormsModule,RouterLink],
+  imports: [CoreModule,NgIf,ReactiveFormsModule,RouterLink,TranslatePipe],
   templateUrl: './forgot-pwd.component.html',
   styleUrl: './forgot-pwd.component.css'
 })

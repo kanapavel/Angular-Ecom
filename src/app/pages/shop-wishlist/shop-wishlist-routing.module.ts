@@ -6,12 +6,6 @@ const routes: Routes = [
   {
     path:'',
     component:WishlistComponent,
-    children:[
-      {
-        path:'contact',
-        loadChildren:()=> import('../contact/contact.module').then(m=> m.ContactModule)
-      }
-    ]
   }
 ];
 

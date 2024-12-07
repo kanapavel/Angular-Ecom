@@ -6,12 +6,14 @@ import { CartService } from '../../../services/cart.service';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { FavoriesService } from '../../../services/favories.service';
+import { RouterModule } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-view-modal',
   standalone: true,
-  imports: [CommonModule,NgIf,NgFor,TitleCasePipe,NgClass,RatingModule,FormsModule],
+  imports: [CommonModule,NgIf,NgFor,TitleCasePipe,NgClass,RatingModule,FormsModule,RouterModule,TranslatePipe],
   templateUrl: './view-modal.component.html',
   styleUrl: './view-modal.component.css'
 })

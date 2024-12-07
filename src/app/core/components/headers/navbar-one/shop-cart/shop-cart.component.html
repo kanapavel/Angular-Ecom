@@ -22,9 +22,9 @@
             <div class="flex flex-col">
                 <h5 id="drawer-right-label"
                     class="inline-flex items-center text-xl font-semibold text-blacks dark:text-gray-400">
-                    Shop Cart
+                    {{'Shop Cart'|translate}}
                 </h5>
-                <small>Location in 382480</small>
+                <small>{{'Location'|translate}} {{'in'|translate}} 382480</small>
             </div>
 
             <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example"
@@ -40,8 +40,8 @@
         <div class="p-4">
             <div class="pb-4 border-b  border-grays-300">
                 <div class="bg-red-100 p-2 border border-red-600 rounded-md text-red-dark">
-                    You've got FREE delivery.Start 
-                    <a href="" class="font-bold">checkout now</a>
+                    {{"You've got FREE delivery"|translate}}.{{'Start'|translate}} 
+                    <a href="" class="font-bold">{{'checkout now'|translate}}</a>
                 </div>
             </div>
             <div *ngIf="data.length !== 0">
@@ -49,13 +49,13 @@
                         <div class="flex items-center">
                             <img [src]="item.img[0]" alt="" class="w-16">
                             <div class="felx flex-col gap-x-2 ml-3 w-40">
-                                <h6 class="font-semibold text-blacks">{{item.nom}}</h6>
+                                <h6 class="font-semibold text-blacks">{{item.nom|translate}}</h6>
                                 <small>{{item.poids|slice:0:1}}</small>
                                 <button (click)="removeToCart(item)" class="flex items-center gap-2 text-small">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3.5 text-greens-800">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
                                     </svg>
-                                    <span>Remove</span>
+                                    <span>{{'Remove'|translate}}</span>
                                 </button>
                             </div>
                             
@@ -124,21 +124,21 @@
                     <rect width="39.6" height="18.36" x="103.858" y="130.248" fill="#409cb5" rx="2"></rect>
                     <circle cx="340.677" cy="179.6" r="2.7" fill="#f9ae2b"></circle>
                 </svg>
-                <h1 class="font-bold text-xl text-grays-200">Oups empty cart!</h1>
+                <h1 class="font-bold text-xl text-grays-200">{{'Oups empty cart'|translate}}!</h1>
             </div>
             <div *ngIf="data.length !== 0" class="flex gap-2 text-lg mt-3">
-                <h1 class="font-bold">Total:</h1>
+                <h1 class="font-bold">{{'Total'|translate}}:</h1>
                 <span>{{totalAmount}}$</span>
             </div>
             <div *ngIf="data.length !== 0" >
                 <div class="flex justify-between items-center mt-4">
                     <a href=""
                         class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-greens-800 rounded-lg hover:bg-green-hover focus:ring-4 focus:ring-greens-300 dark:bg-greens-800 dark:hover:bg-greens-300 focus:outline-none">
-                        Continue Shopping
+                        {{'Continue Shopping'|translate}}
                     </a>
                     <button (click)="updateCart()"
                         class="px-4 py-2 text-sm font-medium text-center text-whites bg-gray-800 hover:bg-gray-700   border rounded-lg focus:outline-none  focus:z-10 focus:ring-4 focus:ring-gray-500  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                            Update Cart
+                            {{'Update Cart'|translate}}
                     </button>
                 </div>
             </div>

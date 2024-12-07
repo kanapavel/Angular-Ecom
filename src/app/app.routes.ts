@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { DetailsProductsComponent } from './pages/details-products/components/details-products.component';
+
 
 export const routes: Routes = [
     {
         path:'home',
-        loadChildren: ()=> import('./pages/home/Home.module').then(m => m.HomeModule),
+        loadChildren: ()=> import('../app/pages/home/Home.module').then(m=>m.HomeModule),
     },
     {
         path:'signup',
@@ -41,6 +41,10 @@ export const routes: Routes = [
     {
         path:'shop-wishlist',
         loadChildren:()=>import('../app/pages/shop-wishlist/shop-wishlist.module').then(m=>m.ShopWishlistModule)
+    },
+    {
+        path:'account',
+        loadChildren:()=>import('../app/pages/my-account/my-account.module').then(m=> m.MyAccountModule)
     },
     {
         path:'',

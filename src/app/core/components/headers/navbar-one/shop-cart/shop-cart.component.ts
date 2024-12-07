@@ -4,6 +4,7 @@ import { TitleCasePipe } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import { CartService } from '../../../../services/cart.service';
 import { products } from '../../../../interfaces/products';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'shop-cart',
@@ -11,7 +12,7 @@ import { products } from '../../../../interfaces/products';
   imports: [
     NgFor,NgIf ,RouterLink,
     TitleCasePipe, CurrencyPipe,
-    NgClass, CommonModule,RouterLink,RouterModule
+    NgClass, CommonModule,RouterLink,RouterModule,TranslatePipe
   ],
   templateUrl: './shop-cart.component.html',
   styleUrl: './shop-cart.component.css'

@@ -5,11 +5,12 @@ import { RatingModule } from 'primeng/rating';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { Chart } from 'chart.js/auto';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-reviews',
   standalone: true,
-  imports: [CommentsComponent,RatingModule,FormsModule,ReactiveFormsModule,NgIf],
+  imports: [CommentsComponent,RatingModule,FormsModule,ReactiveFormsModule,NgIf,TranslatePipe],
   templateUrl: './reviews.component.html',
   styleUrl: './reviews.component.css'
 })

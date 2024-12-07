@@ -6,7 +6,7 @@
             </a>
         </div>
         <div>
-            <span>Already have an account? <a routerLink="/signin" class="text-greens-800">Sign in</a></span>
+            <span>{{'Already have an account'|translate}}? <a routerLink="/signin" class="text-greens-800">{{'Sign in'|translate}}</a></span>
         </div>
     </div>
 </nav>
@@ -18,24 +18,24 @@
             </div>
             <div class="w-96 ml-24 max-lg:ml-0 max-md:w-full">
                 <div class="mb-10">
-                    <h1 class="text-ls font-bold mb-1 max-sm:text-xl">Forgot your password?</h1>
+                    <h1 class="text-ls font-bold mb-1 max-sm:text-xl">{{'Forgot your password'|translate}}?</h1>
                     <p class="text-gray-ligth font-medium mb-4">
-                        Please enter the email address associated with your account and We will email you a link to reset your password.
+                        {{'Please enter the email address associated with your account and We will email you a link to reset your password'|translate}}.
                     </p>
                 </div>
                 <form [formGroup]="applyForms" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
                     <div>
-                        <input class="input-style" type="email" placeholder="Email" formControlName="email">
+                        <input class="input-style" type="email" placeholder="{{'Email'|translate}}" formControlName="email">
                         <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('required')" class="text-reds text-small">
-                            Please enter email
+                            {{'Please enter email'|translate}}
                         </span>
                         <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('email')" class="text-reds text-small">
-                            Please enter valid email
+                            {{'Please enter valid email'|translate}}
                         </span>
                     </div>
                     <div class="flex flex-col gap-2">
-                        <button type="submit" class="boutton w-full text-whites py-2.5 px-4 bg-greens-800 hover:bg-green-hover">Sign In</button>
-                        <a routerLink="/" class="flex justify-center boutton w-full  py-2.5 px-4 bg-grays-200 hover:bg-gray-ligth">Back</a>
+                        <button type="submit" class="boutton w-full text-whites py-2.5 px-4 bg-greens-800 hover:bg-green-hover">{{'Sign in'|translate}}</button>
+                        <a routerLink="/" class="flex justify-center boutton w-full  py-2.5 px-4 bg-grays-200 hover:bg-gray-ligth">{{'Back'|translate}}</a>
                     </div>
                 </form>
             </div>

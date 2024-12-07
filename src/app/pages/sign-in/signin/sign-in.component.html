@@ -6,7 +6,7 @@
             </a>
         </div>
         <div>
-            <span>Already have an account? <a routerLink="/signin" class="text-greens-800">Sign in</a></span>
+            <span>{{'Already have an account'|translate}}? <a routerLink="/signin" class="text-greens-800">{{'Sign in'|translate}}</a></span>
         </div>
     </div>
 </nav>
@@ -16,46 +16,45 @@
             <div class="w-96 h-96 px-4 bg-[url('assets/signin-g.svg')] bg-center bg-cover max-sm:w-full">
                 <!-- <img src="assets/fp-g.svg" alt=""> -->
             </div>
-            <div class="w-96 ml-24 max-lg:ml-0 max-sm:w-full">
+            <div class="w-128 ml-24 max-lg:ml-0 max-sm:w-full">
                 <div class="mb-10">
-                    <h1 class="text-ld font-bold mb-1 max-md:text-xl">Sign in to FreshCart</h1>
-                    <p class="text-gray-ligth font-medium mb-4">Welcome back to FreshCart! Enter your email to get
-                        started.</p>
+                    <h1 class="text-ld font-bold mb-1 max-md:text-xl">{{'Sign in to'|translate}} FreshCart</h1>
+                    <p class="text-gray-ligth font-medium mb-4">{{'Welcome back to '|translate}}FreshCart! {{'Enter your email to get started'|translate}}.</p>
                 </div>
                 <form [formGroup]="applyForms" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
                     <div>
-                        <input class="input-style" type="email" placeholder="Email" formControlName="email">
+                        <input class="input-style" type="email" placeholder="{{'Email'|translate}}" formControlName="email">
                         <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('required')" class="text-reds text-small">
-                            Please enter email
+                            {{'Please enter email'|translate}}
                         </span>
                         <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('email')" class="text-reds text-small">
-                            Please enter valid email
+                            {{'Please enter valid email'|translate}}
                         </span>
                     </div>
                     <div>
                         <input class="input-style" type="password" placeholder="*****" formControlName="password">
                         <span *ngIf="applyForms.get('password')?.touched && applyForms.get('password')?.hasError('required')" class="text-reds text-small">
-                            Please enter password
+                            {{'Please enter password'|translate}}
                         </span>
                         <span *ngIf="applyForms.get('password')?.touched && applyForms.get('password')?.hasError('pattern')" class="text-reds text-small">
-                            Minimum 8 characters ex: Exemple&123
+                            {{'Minimum 8 characters ex: Exemple&123'|translate}}
                         </span>
                     </div>
                     <div class="flex justify-between items-center">
                         <div>
                             <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-greens-800 bg-gray-100 border-gray-300 rounded focus:ring-greens-200 ">
-                            <label for="checked-checkbox" class="ms-2 dark:text-gray-300">Remember me</label>
+                            <label for="checked-checkbox" class="ms-2 dark:text-gray-300">{{'Remember me'|translate}}</label>
                         </div>
                         <div>
-                            Forgot Password <a routerLink="/forgotpwd"
-                                class="text-greens-800 hover:text-green-hover">Reset it</a>
+                            {{'Forgot Password'|translate}} <a routerLink="/forgotpwd"
+                                class="text-greens-800 hover:text-green-hover">{{'Reset it'|translate}}</a>
                         </div>
                     </div>
                     <div>
-                        <button type="submit" class="boutton w-full text-whites py-2.5 px-4 bg-greens-800 hover:bg-green-hover">Sign In</button>
+                        <button type="submit" class="boutton w-full text-whites py-2.5 px-4 bg-greens-800 hover:bg-green-hover">{{'Sign in'|translate}}</button>
                     </div>
                     <div>
-                        <span>Don't have an account? <a routerLink="/signup" class="text-greens-800">Sign Up</a></span>
+                        <span>{{'Don\'t have an account'|translate}}? <a routerLink="/signup" class="text-greens-800">{{'Sign Up'|translate}}</a></span>
                     </div>
                 </form>
             </div>

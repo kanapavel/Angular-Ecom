@@ -1,18 +1,18 @@
 <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4 shadow-none" mat-stretch-tabs="false" mat-align-tabs="start" (selectedIndexChange)="selectTabIndex.set($event)">
-    <mat-tab label="Product Details">
+    <mat-tab label="{{'Product Details'|translate}}">
         @defer(when selectTabIndex() === 0){
             <app-details [data]="data"/>
         }
     </mat-tab>
-    <mat-tab label="Informations">
+    <mat-tab label="{{'Informations'|translate}}">
         @defer(when selectTabIndex() === 1){
             <app-informations [data]="data"/>
         }
     </mat-tab>
-    <mat-tab label="Reviews">
+    <mat-tab label="{{'Reviews'|translate}}">
         @defer(when selectTabIndex() === 2){
             <app-reviews [item]="data"/>
         }
     </mat-tab>
-    <mat-tab label="Seller Info" disabled></mat-tab>
+    <mat-tab label="{{'Seller Info'|translate}}" disabled></mat-tab>
 </mat-tab-group>

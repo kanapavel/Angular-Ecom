@@ -7,6 +7,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { ShopCartComponent } from "./shop-cart/shop-cart.component";
 import { FavoriesService } from '../../../services/favories.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar-one',
@@ -16,7 +17,7 @@ import { FavoriesService } from '../../../services/favories.service';
     TitleCasePipe, CurrencyPipe,
     NgClass, CommonModule, LocationPopupComponent,
     SignUpPopupComponent, RouterLink, RouterModule,
-    ShopCartComponent
+    ShopCartComponent,TranslatePipe
 ],
   templateUrl: './navbar-one.component.html',
   styleUrl: './navbar-one.component.css'

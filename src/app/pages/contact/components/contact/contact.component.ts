@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FormGroup, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { CoreModule } from '../../../../core/core.module';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CoreModule,ReactiveFormsModule,NgIf
-  ],
+  imports: [CoreModule,ReactiveFormsModule,NgIf,TranslatePipe],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

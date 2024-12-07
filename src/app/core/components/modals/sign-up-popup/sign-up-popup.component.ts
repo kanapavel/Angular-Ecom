@@ -1,12 +1,13 @@
 import { Component, Input, Output,EventEmitter } from '@angular/core';
 import{CommonModule, NgIf} from '@angular/common';
 import {FormControl, FormGroup, ReactiveFormsModule,Validators} from '@angular/forms';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-sign-up-popup',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,NgIf],
+  imports: [CommonModule,ReactiveFormsModule,NgIf,TranslatePipe],
   templateUrl: './sign-up-popup.component.html',
   styleUrl: './sign-up-popup.component.css'
 })

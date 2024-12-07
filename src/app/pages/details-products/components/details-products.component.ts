@@ -10,6 +10,7 @@ import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { PopularProductsComponent } from '../../home/components/popular-products/popular-products/popular-products.component';
 import { FavoriesService } from '../../../core/services/favories.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-details-products',
@@ -17,7 +18,7 @@ import { FavoriesService } from '../../../core/services/favories.service';
   imports: [
     RouterLink,RouterModule,CoreModule,NgIf,
     TitleCasePipe,NgClass,TabsComponent,CommonModule,
-    RatingModule,FormsModule,PopularProductsComponent,SlicePipe
+    RatingModule,FormsModule,PopularProductsComponent,SlicePipe,TranslatePipe
   ],
   templateUrl: './details-products.component.html',
   styleUrl: './details-products.component.css'

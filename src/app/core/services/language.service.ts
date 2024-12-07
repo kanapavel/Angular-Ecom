@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class LanguageService {
   private keyLanguage = 'userLanguage';
   private _userLanguage ='';
-  private supportedLanguages = ['en','fr','shi','zh']
+  private supportedLanguages = ['en','fr','sw','zh']
 
   constructor(private translate:TranslateService) {
     this.initLanguage();
@@ -33,7 +33,7 @@ export class LanguageService {
     this.translate.use(this._userLanguage);
   }
 
-  get userLanguage(){
+  getUserLanguage(){
     return this._userLanguage;
   }
 

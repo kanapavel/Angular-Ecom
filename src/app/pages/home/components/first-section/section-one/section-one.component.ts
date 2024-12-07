@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgFor, NgStyle } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
+
 
 
 @Component({
   selector: 'app-section-one',
   standalone: true,
-  imports: [NgFor,NgStyle],
+  imports: [NgFor,NgStyle,TranslatePipe],
   templateUrl: './section-one.component.html',
   styleUrl: './section-one.component.css'
 })
-export class SectionOneComponent {
+export class SectionOneComponent implements OnInit{
 
   constructor(){}
 
@@ -42,6 +44,6 @@ export class SectionOneComponent {
     },
    ]
 
-  
+   ngOnInit(): void {}
 
 }

@@ -5,10 +5,10 @@
 
     <section>
         <div class="flex gap-5 mt-4 px-20 max-sm:px-6">
-            <a href="" class="text-greens-800">Home</a>
+            <a href="" class="text-greens-800">{{'Home'|translate}}</a>
             <li class="list-none text-gray-ligth">/</li>
-            <a href="" class="text-greens-800">{{item.categorie}}</a>
-            <li class="list-none text-gray-ligth">/  {{item.nom}}</li>
+            <a href="" class="text-greens-800">{{item.categorie|translate}}</a>
+            <li class="list-none text-gray-ligth">/  {{item.nom|translate}}</li>
         </div>
     </section>
 
@@ -45,8 +45,8 @@
                    </div>
                    <div class="w-6/12 pl-8 max-md:pl-0 max-md:w-full">
                        <div class="pl-6 max-md:pl-0 max-md:mt-5 w-11/12 max-md:w-full">
-                           <a href="" class="flex text-greens-800 mb-4">{{item.categorie}}</a>
-                           <h2 class="flex mb-1 text-ld font-bold max-md:text-ls">{{item.nom}}</h2>
+                           <a href="" class="flex text-greens-800 mb-4">{{item.categorie|translate}}</a>
+                           <h2 class="flex mb-1 text-ld font-bold max-md:text-ls">{{item.nom|translate}}</h2>
                            <div class="flex items-center gap-2 mb-2">
                             <p-rating
                             class="text-yellow-300 flex"
@@ -54,7 +54,7 @@
                                 [readonly]="true"
                                 iconCancelClass="hidden"
                             ></p-rating>
-                            <a href="" class="text-greens-800">({{item.commentaires.length}} reviews)</a>
+                            <a href="" class="text-greens-800">({{item.commentaires.length}} {{'reviews'|translate}})</a>
                         </div>
                            <div class="flex gap-3 items-center">
                                <span class="text-blacks text-xl font-bold">${{item.prix_reduit}}</span>
@@ -91,9 +91,9 @@
                                        <svg class = " -ms-2 me-2 h-5 w-5 " aria-hidden = " true " xmlns = " http://www.w3.org/2000/svg " width = " 24 " height = " 24 " fill = " aucun " viewBox = " 0 0 24 24 " >       
                                            <path stroke = " currentColor " stroke-linecap = " rond " stroke-linejoin = " rond " stroke-width = " 2 " d = " M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6 " />      
                                        </svg>
-                                       Add to cart
+                                       {{'Add to cart'|translate}}
                                    }@else{
-                                       Remove to cart
+                                      {{'Remove to cart'|translate}}
                                    }
                                </button>
                                <button type="button" class="px-4 py-2 text-sm font-medium text-center bg-gray-100 hover:bg-gray-200   border rounded-lg focus:outline-none  focus:z-10 focus:ring-4 focus:ring-gray-600  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
@@ -117,25 +117,25 @@
                            <table>
                                <tbody>
                                    <tr class="flex start-0">
-                                       <td class="px-6 py-3 text-grays-800">Product Code:</td>
+                                       <td class="px-6 py-3 text-grays-800">{{'Product Code'|translate}}:</td>
                                        <td class="px-6 py-3 text-grays-800">{{item.informations.ASIN}}</td>
                                    </tr>
                                    <tr class="flex start-0">
-                                       <td class="px-6 py-3 text-grays-800">Availability:</td>
-                                       <td class="px-6 py-3 text-grays-800">{{item.stock ? "In stock" : "Not in stock"}}</td>
+                                       <td class="px-6 py-3 text-grays-800">{{'Availability'|translate}}:</td>
+                                       <td class="px-6 py-3 text-grays-800">{{item.stock ? "In stock" : "Not in stock"|translate}}</td>
                                    </tr>
                                    <tr class="flex start-0">
-                                       <td class="px-6 py-3 text-grays-800">Type:</td>
-                                       <td class="px-6 py-3 text-grays-800">{{item.type | titlecase}}</td>
+                                       <td class="px-6 py-3 text-grays-800">{{'Type'|translate}}:</td>
+                                       <td class="px-6 py-3 text-grays-800">{{item.type | titlecase|translate}}</td>
                                    </tr>
                                    <tr class="flex start-0">
-                                       <td class="px-6 py-3 text-grays-800">Shipping:</td>
-                                       <td class="px-6 py-3 text-grays-800"> <small>01 day shipping. <span>(Free pickup today)</span></small></td>
+                                       <td class="px-6 py-3 text-grays-800">{{'Shipping'|translate}}:</td>
+                                       <td class="px-6 py-3 text-grays-800"> <small>{{'01 day shipping'|translate}}. <span>({{'Free pickup today'|translate}})</span></small></td>
                                    </tr>
                                </tbody>
                            </table>
                            
-                           <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="click" class="border border-grays-800 mt-5 text-grays-800 bg-whites hover:text-whites focus:bg-grays-800 focus:text-whites hover:bg-grays-800 focus:ring-4 focus:outline-none focus:ring-grays-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center transition-all ease-in-out duration-300" type="button">Share<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                           <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="click" class="border border-grays-800 mt-5 text-grays-800 bg-whites hover:text-whites focus:bg-grays-800 focus:text-whites hover:bg-grays-800 focus:ring-4 focus:outline-none focus:ring-grays-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center transition-all ease-in-out duration-300" type="button">{{'Share'|translate}}<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                                </svg>
                             </button>
@@ -174,7 +174,7 @@
     </section>
 
     <section class="my-20 px-20 max-sm:px-6">
-        <h3 class="mb-2 text-xl font-bold">Related Items</h3>
+        <h3 class="mb-2 text-xl font-bold">{{'Related Items'|translate}}</h3>
         <div class="grid grid-cols-5 gap-4 mt-2 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:gap-1">
             <app-popular-products *ngFor="let products of allProducts |slice:0:5" [data]="products" [isDetails]="true" />
         </div>

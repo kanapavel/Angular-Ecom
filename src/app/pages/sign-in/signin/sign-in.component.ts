@@ -3,11 +3,12 @@ import { RouterLink } from '@angular/router';
 import { FormGroup, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { CoreModule } from '../../../core/core.module';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [RouterLink,CoreModule,NgIf,ReactiveFormsModule],
+  imports: [RouterLink,CoreModule,NgIf,ReactiveFormsModule,TranslatePipe],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })

@@ -3,11 +3,12 @@ import { FormGroup, ReactiveFormsModule, Validators, FormControl } from '@angula
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { CoreModule } from '../../../../core/core.module';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [ReactiveFormsModule,NgIf,CoreModule,RouterLink],
+  imports: [ReactiveFormsModule,NgIf,CoreModule,RouterLink,TranslatePipe],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })

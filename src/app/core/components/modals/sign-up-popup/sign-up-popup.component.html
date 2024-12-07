@@ -1,7 +1,7 @@
 <div *ngIf="showSignUpModal" class="bg-modals" (click)="onCloseModal($event)">
     <div class="bg-modals-inner min-h-128 w-130 p-4">
         <div class="center-items p-4">
-            <h1 class="text-xl font-bold font-blacks">Sign Up</h1>
+            <h1 class="text-xl font-bold font-blacks">{{'Sign Up'|translate}}</h1>
             <button class="btn-close" (click)="this.onClose.emit()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 svg-style">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -10,42 +10,42 @@
         </div>
         <form [formGroup]="applyForms" (ngSubmit)="onSubmit()" class="p-4">
             <div class="flex-col mb-3">
-                <label for="first-name" class="label-style">Name</label>
-                <input class="input-style" type="text" id="first-name" placeholder="Enter Your Name" formControlName="firstName">
+                <label for="first-name" class="label-style">{{'Name'|translate}}</label>
+                <input class="input-style" type="text" id="first-name" placeholder="{{'Enter Your Name'|translate}}" formControlName="firstName">
                 <span *ngIf="applyForms.get('firstName')?.touched && applyForms.get('firstName')?.hasError('required')" class="text-reds text-small">
-                    Please enter name
+                    {{'Please enter name'|translate}}
                 </span>
                 <span *ngIf="applyForms.get('firstName')?.touched && applyForms.get('firstName')?.hasError('minlength')" class="text-reds text-small">
-                    Minimum 3 characters
+                    {{'Minimum 3 characters'|translate}}
                 </span>
             </div>
             <div class="flex-col mb-3">
-                <label class="label-style" for="Email">Email adresse</label>
-                <input class="input-style" type="email" id="Email" placeholder="Enter Your Email adresse" formControlName="email">
+                <label class="label-style" for="Email">{{'Email address'|translate}}</label>
+                <input class="input-style" type="email" id="Email" placeholder="{{'Enter Your Email address'|translate}}" formControlName="email">
                 <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('required')" class="text-reds text-small">
-                    Please enter email
+                    {{'Please enter email'|translate}}
                 </span>
                 <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('email')" class="text-reds text-small">
-                    Please enter valid email
+                    {{'Please enter valid email'|translate}}
                 </span>
             </div>
             <div class="flex-col mb-3">
-                <label class="label-style" for="password">Password</label>
-                <input class="input-style" type="password" id="password" placeholder="Enter Your Password" formControlName="password">
+                <label class="label-style" for="password">{{'Password'|translate}}</label>
+                <input class="input-style" type="password" id="password" placeholder="{{'Enter Your Password'|translate}}" formControlName="password">
                 <span *ngIf="applyForms.get('password')?.touched && applyForms.get('password')?.hasError('required')" class="text-reds text-small">
-                    Please enter password
+                    {{'Please enter password'|translate}}
                 </span>
                 <span *ngIf="applyForms.get('password')?.touched && applyForms.get('password')?.hasError('pattern')" class="text-reds text-small">
-                    Minimum 8 characters ex: Exemple&123
+                    {{'Minimum 8 characters'|translate}} ex: Exemple&123
                 </span>
                 <div>
-                    <small class="transition-all ease-in-out duration-200">By Signup, you agree to our <a href="#" class="text-greens-800 hover:text-green-hover">Terms of Service</a> & <a href="#" class="text-greens-800 hover:text-green-hover">Privacy Policy</a></small>
+                    <small class="transition-all ease-in-out duration-200">{{'By Signup, you agree to our'|translate}} <a href="#" class="text-greens-800 hover:text-green-hover">{{'Terms of Service'|translate}}</a> & <a href="#" class="text-greens-800 hover:text-green-hover">{{'Privacy Policy'|translate}}</a></small>
                 </div>
             </div>
             <div>
-                <button type="submit" class="boutton text-whites py-2 px-4 bg-greens-800 hover:bg-green-hover">Sign Up</button>
+                <button type="submit" class="boutton text-whites py-2 px-4 bg-greens-800 hover:bg-green-hover">{{'Sign Up'|translate}}</button>
             </div>
         </form>
-        <div class="flex justify-center p-3">Already have an account ?<a href="" class="text-greens-800 hover:text-green-hover"> Sign in</a></div>
+        <div class="flex justify-center p-3">{{'Already have an account'|translate}} ?<a href="" class="text-greens-800 hover:text-green-hover"> {{'Sign in'|translate}}</a></div>
     </div>
 </div>

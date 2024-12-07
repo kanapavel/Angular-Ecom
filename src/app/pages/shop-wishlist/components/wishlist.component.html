@@ -3,16 +3,16 @@
 <app-navbar-two />
 
 <div class="flex gap-5 mt-4 px-20 max-sm:px-6">
-    <a href="" class="text-greens-800">Home</a>
+    <a href="" class="text-greens-800">{{'Home'|translate}}</a>
     <li class="list-none text-gray-ligth">/</li>
-    <a href="" class="text-greens-800">Shop</a>
-    <li class="list-none text-gray-ligth">/ Snacks & Munchies</li>
+    <a href="" class="text-greens-800">{{'Shop'|translate}}</a>
+    <li class="list-none text-gray-ligth">/ {{'Snacks & Munchies'|translate}}</li>
 </div>
 
 <section class="mt-8 mb-20 px-20 max-sm:px-6">
     <div class="mb-8">
-        <h1 class="text-ld font-bold mb-1">My Wishlist</h1>
-        <p class="text-gray-ligth font-medium mb-4">There are {{items.length}} products in this wishlist.</p>
+        <h1 class="text-ld font-bold mb-1">{{'My Wishlist'|translate}}</h1>
+        <p class="text-gray-ligth font-medium mb-4">{{'There are'|translate}} {{items.length}} {{'products in this wishlist'|translate}}.</p>
     </div>
 
     
@@ -23,7 +23,7 @@
                 <tr>
                     <th scope="col" class="p-4">
                         <div class="flex items-center">
-                            <input id="checkbox-all" type="checkbox" class="w-4 h-4 text-greens-800 bg-gray-100 border-gray-300 rounded focus:ring-greens-300">
+                            <input id="checkbox-all" type="checkbox" #checkAll class="w-4 h-4 text-greens-800 bg-gray-100 border-gray-300 rounded focus:ring-greens-300">
                             <label for="checkbox-all" class="sr-only">checkbox</label>
                         </div>
                     </th>
@@ -31,19 +31,19 @@
                         
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Product
+                        {{'Product'|translate}}
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Amount
+                        {{'Amount'|translate}}
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Status
+                        {{'Status'|translate}}
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Actions
+                        {{'Actions'|translate}}
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Remove
+                        {{'Remove'|translate}}
                     </th>
                 </tr>
             </thead>
@@ -51,7 +51,7 @@
                 <tr class="bg-white border-b">
                     <td class="w-4 p-4">
                         <div class="flex items-center">
-                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-greens-800 bg-gray-100 border-gray-300 rounded focus:ring-greens-300">
+                            <input id="checkbox-table-1" type="checkbox" class="checkbox w-4 h-4 text-greens-800 bg-gray-100 border-gray-300 rounded focus:ring-greens-300">
                             <label for="checkbox-table-1" class="sr-only">checkbox</label>
                         </div>
                     </td>
@@ -59,7 +59,7 @@
                         <img [src]="item.img[0]" alt="" class="w-16">
                     </th>
                     <td class="px-6 py-4 flex flex-col">
-                        <a href="" class="hover:text-greens-800 font-bold text-blacks">{{item.nom}} </a>
+                        <a href="" class="hover:text-greens-800 font-bold text-blacks">{{item.nom|translate}} </a>
                         <span>{{item.poids[0]}}</span>
                     </td>
                     <td class="px-6 py-4">
@@ -67,9 +67,9 @@
                     </td>
                     <td class="px-6 py-4">
                         @if (item.stock) {
-                            <span class="text-bigSmall text-whites rounded-md bg-green-hover px-1 py-0.5">In Stock</span>
+                            <span class="text-bigSmall text-whites rounded-md bg-green-hover px-1 py-0.5">{{'In stock'|translate}}</span>
                         }@else {
-                            <span class="text-bigSmall text-whites rounded-md bg-reds px-0.5 py-0.5">Out of Stock</span>
+                            <span class="text-bigSmall text-whites rounded-md bg-reds px-0.5 py-0.5">{{'Out of stock'|translate}}</span>
                         }
                     </td>
                     <td class="px-6 py-4">
@@ -77,13 +77,13 @@
                             <button type="button" (click)="toggleAddCart(item)" [ngClass]="{'active':isInCart(item)}"
                             class="inline-flex items-center rounded-md bg-greens-800 px-2 py-1 font-bold text-small text-white hover:bg-green-hover focus:outline-none focus:ring-4  focus:ring-greens-300">
                             @if(!isInCart(item)){
-                                Add to Cart
+                                {{'Add to cart'|translate}}
                             }@else{
-                                Remove
+                                {{'Remove'|translate}}
                             }
                         </button>
                         }@else {
-                            <a routerLink="contact" class="font-medium boutton text-whites text-small bg-dark-blue rounded-md py-1 px-2 hover:bg-blacks">Contact Us</a>
+                            <a routerLink="/contact" class="font-medium boutton text-whites text-small bg-dark-blue rounded-md py-1 px-2 hover:bg-blacks">{{'Contact Us'|translate}}</a>
                         }
                         
                     </td>
@@ -98,7 +98,7 @@
                         <div [attr.id]="'tooltip-quick-look' + item.id" role="tooltip"
                             class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-2 py-1 text-small font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
                             data-popper-placement="top">
-                            Quick View
+                            {{'Quick View'|translate}}
                             <div class="tooltip-arrow" data-popper-arrow=""></div>
                         </div>
                     </td>

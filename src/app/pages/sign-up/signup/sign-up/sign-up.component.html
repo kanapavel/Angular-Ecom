@@ -6,7 +6,7 @@
             </a>
         </div>
         <div>
-            <span>Already have an account? <a routerLink="/signin" class="text-greens-800">Sign in</a></span>
+            <span>{{'Already have an account'|translate}}? <a routerLink="/signin" class="text-greens-800">{{'Sign in'|translate}}</a></span>
         </div>
     </div>
 </nav>
@@ -16,54 +16,54 @@
             <div class="w-96 h-96 px-4 bg-[url('assets/signup-g.svg')] bg-center bg-cover max-lg:bg-contain max-lg:bg-no-repeat">
                 <!-- <img src="assets/fp-g.svg" alt=""> -->
             </div>
-            <div class="w-96 ml-24 max-lg:ml-0 max-lg:mr-5 max-lg:w-128 max-md:w-full max-md:mr-0">
+            <div class="w-128 ml-24 max-lg:ml-0 max-lg:mr-5 max-lg:w-128 max-md:w-full max-md:mr-0">
                 <div class="mb-10">
-                    <h1 class="text-ld font-bold mb-1">Get Start Shopping</h1>
-                    <p class="text-gray-ligth font-medium mb-4">Welcome to FreshCart! Enter your email to get started.
+                    <h1 class="text-ld font-bold mb-1">{{'Get Start Shopping'|translate}}</h1>
+                    <p class="text-gray-ligth font-medium mb-4">{{'Welcome to'|translate}} FreshCart!{{'Enter your email to get started'|translate}}.
                     </p>
                 </div>
                 <form [formGroup]="applyForms" (ngSubmit)="onSubmit()" class="grid grid-cols-2 gap-4">
                     <div class="flex flex-col">
-                        <input class="input-style" type="text" name="firstname" id="firstname" placeholder="First Name" formControlName="firstname">
+                        <input class="input-style" type="text" name="firstname" id="firstname" placeholder="{{'First Name'|translate}}" formControlName="firstname">
                         <span *ngIf="applyForms.get('firstname')?.touched && applyForms.get('firstname')?.hasError('required')" class="text-reds text-small">
-                            Please enter firstname
+                            {{'Please enter firstname'|translate}}
                         </span>
                         <span *ngIf="applyForms.get('firstname')?.touched && applyForms.get('firstname')?.hasError('minlength')" class="text-reds text-small">
-                            Minimum 3 characters
+                            {{'Minimum 3 characters'|translate}}
                         </span>
                     </div>
                     <div class="flex flex-col">
-                        <input class="input-style" type="text" name="lastname" id="lastname" placeholder="Last Name" formControlName="lastname">
+                        <input class="input-style" type="text" name="lastname" id="lastname" placeholder="{{'Last Name'|translate}}" formControlName="lastname">
                         <span *ngIf="applyForms.get('lastname')?.touched && applyForms.get('lastname')?.hasError('required')" class="text-reds text-small">
-                            Please enter lastname
+                            {{'Please enter lastname'|translate}}
                         </span>
                         <span *ngIf="applyForms.get('lastname')?.touched && applyForms.get('lastname')?.hasError('minlength')" class="text-reds text-small">
-                            Minimum 3 characters
+                            {{'Minimum 3 characters'|translate}}
                         </span>
                     </div>
                     <div class="col-start-1 col-end-3">
-                        <input class="input-style" type="email" placeholder="Email" formControlName="email">
+                        <input class="input-style" type="email" placeholder="{{'Email'|translate}}" formControlName="email">
                         <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('required')" class="text-reds text-small">
-                            Please enter email
+                            {{'Please enter email'|translate}}
                         </span>
                         <span *ngIf="applyForms.get('email')?.touched && applyForms.get('email')?.hasError('email')" class="text-reds text-small">
-                            Please enter valid email
+                            {{'Please enter valid email'|translate}}
                         </span>
                     </div>
                     <div class="col-start-1 col-end-3">
                         <input class="input-style" type="password" placeholder="*****" formControlName="password">
                         <span *ngIf="applyForms.get('password')?.touched && applyForms.get('password')?.hasError('required')" class="text-reds text-small">
-                            Please enter password
+                            {{'Please enter password'|translate}}
                         </span>
                         <span *ngIf="applyForms.get('password')?.touched && applyForms.get('password')?.hasError('pattern')" class="text-reds text-small">
-                            Minimum 8 characters ex: Exemple&123
+                            {{'Minimum 8 characters ex: Exemple&123'|translate}}
                         </span>
                     </div>
                     <div class="col-start-1 col-end-3">
-                        <button type="submit" class="boutton w-full text-whites py-2.5 px-4 bg-greens-800 hover:bg-green-hover">Register</button>
+                        <button type="submit" class="boutton w-full text-whites py-2.5 px-4 bg-greens-800 hover:bg-green-hover">{{'Register'|translate}}</button>
                     </div>
                     <div class="text-small col-start-1 col-end-3">
-                        <span>By continuing, you agree to our  <a href="#" class="text-greens-800">Terms of Service</a> & <a href="#" class="text-greens-800">Privacy Police</a></span>
+                        <span>{{'By continuing, you agree to our'|translate}}  <a href="#" class="text-greens-800">{{'Terms of Service'|translate}}</a> & <a href="#" class="text-greens-800">{{'Privacy Police'|translate}}</a></span>
                     </div>
                 </form>
             </div>

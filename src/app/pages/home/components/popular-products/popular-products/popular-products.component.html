@@ -4,7 +4,7 @@
         <div *ngIf="data.etiquette === 'Sale' || data.etiquette === 'Hot'"
             class="absolute top-0 start-0 flex items-center justify-center px-1.5 py-0.5 text-whites bg-reds rounded-md">
             <span class="text-bigSmall font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
-                {{data.etiquette}}
+                {{data.etiquette|translate}}
             </span>
         </div>
         <div *ngIf="data.etiquette === '14%' "
@@ -33,13 +33,13 @@
                 <div [attr.id]="'tooltip-quick-look' + data.id" role="tooltip"
                     class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-2 py-1 text-small font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
                     data-popper-placement="top">
-                    Quick View
+                    {{'Quick View'|translate}}
                     <div class="tooltip-arrow" data-popper-arrow=""></div>
                 </div>
 
                 <button type="button" [attr.data-tooltip-target]="'tooltip-add-to-favorites' + data.id" (click)="toggleAddFavorie(data)"
                     class="bg-whites shadow-md rounded-lg p-2 text-gray-500 hover:bg-greens-800 hover:text-whites dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                    <span class="sr-only"> Add to Favorites </span>
+                    <span class="sr-only">Whishlist</span>
                     @if (isInFavorie(data)) {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 stroke-reds text-reds">
                             <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
@@ -55,12 +55,12 @@
                 <div [attr.id]="'tooltip-add-to-favorites' + data.id" role="tooltip"
                     class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-2 py-1 text-small font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
                     data-popper-placement="top">
-                    Whishlist
+                    {{'Whishlist'|translate}}
                     <div class="tooltip-arrow" data-popper-arrow=""></div>
                 </div>
                 <button type="button" [attr.data-tooltip-target]="'compare' + data.id"
                     class="bg-whites shadow-md rounded-lg p-2 text-gray-500 hover:bg-greens-800 hover:text-whites dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                    <span class="sr-only"> Compare </span>
+                    <span class="sr-only">Compare</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
                         <path fill-rule="evenodd"
                             d="M15.97 2.47a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H7.5a.75.75 0 0 1 0-1.5h11.69l-3.22-3.22a.75.75 0 0 1 0-1.06Zm-7.94 9a.75.75 0 0 1 0 1.06l-3.22 3.22H16.5a.75.75 0 0 1 0 1.5H4.81l3.22 3.22a.75.75 0 1 1-1.06 1.06l-4.5-4.5a.75.75 0 0 1 0-1.06l4.5-4.5a.75.75 0 0 1 1.06 0Z"
@@ -71,7 +71,7 @@
                 <div [attr.id]="'compare' + data.id" role="tooltip"
                     class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-2 py-1 text-small font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
                     data-popper-placement="top">
-                    Compare
+                    {{'Compare'|translate}}
                     <div class="tooltip-arrow" data-popper-arrow=""></div>
                 </div>
             </div>
@@ -79,19 +79,19 @@
     </div>
     <div class="pt-6">
         <div>
-            <small class="text-small font-medium text-gray-500 dark:text-gray-400">{{data.categorie}}</small>
+            <small class="text-small font-medium text-gray-500 dark:text-gray-400">{{data.categorie|translate}}</small>
         </div>
 
         <h2>
             @if(isDetails){
                 <a href="#"
                 class="flex w-full text-base font-semibold leading-tight text-gray-900 hover:text-greens-800 dark:text-white">
-                {{data.nom}}
+                {{data.nom|translate}}
             </a>
             }@else {
                 <a [routerLink]="['details-product',data.id]"
                     class="flex w-full text-base font-semibold leading-tight text-gray-900 hover:text-greens-800 dark:text-white">
-                    {{data.nom}}
+                    {{data.nom|translate}}
                 </a>
             }
             
@@ -124,9 +124,9 @@
                         <path
                             d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
                     </svg>
-                    Add
+                    {{'Add'|translate}}
                 }@else{
-                    Remove
+                    {{'Remove'|translate}}
                 }
             </button>
         </div>

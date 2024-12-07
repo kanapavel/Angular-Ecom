@@ -1,11 +1,12 @@
 import { NgFor, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-featured-section',
   standalone: true,
-  imports: [NgFor,NgStyle],
+  imports: [NgFor,NgStyle,TranslatePipe],
   templateUrl: './featured-section.component.html',
   styleUrl: './featured-section.component.css'
 })

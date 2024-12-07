@@ -1,21 +1,43 @@
 <div class="flex justify-between items-center px-20 h-8 bg-background text-base text-gray-ligth max-sm:px-6 max-sm:justify-center">
-    <p>{{text}}</p>
+    <p>{{text | translate}}</p>
     <div class="max-sm:hidden">
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-grays-800 hover:text-greens-800 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><img src="assets/flag/royaume-uni.png" alt="" class="mr-1">{{anglais | titlecase}} <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-        </svg>
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-grays-800 hover:text-greens-800 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+            @if (userLanguage === "en") {
+                <img src="assets/flag/royaume-uni.png" alt="" class="mr-1">
+                {{english | titlecase|translate}} 
+            }@else if (userLanguage === "fr") {
+                <img src="assets/flag/france.png" alt="" class="mr-1">
+                {{french | titlecase|translate}} 
+            }@else if (userLanguage === "zh") {
+                <img src="assets/flag/chine.png" alt="" class="mr-1">
+                {{chinese | titlecase|translate}} 
+            }@else if (userLanguage === "sw") {
+                <img src="assets/flag/angola.png" alt="" class="mr-1">
+                {{swahili | titlecase|translate}} 
+            }
+            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
         </button>
 
         <!-- Dropdown menu -->
         <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-700">
             <ul class="p-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                <li class="nav-links flex gap-2">
+                <li class="nav-links flex gap-2" (click)="changeLanguage('en')">
                     <img src="assets/flag/royaume-uni.png" alt="">
-                    <a href="#" class=" dark:hover:bg-gray-600 dark:hover:text-white">{{anglais|titlecase}}</a>
+                    <button class=" dark:hover:bg-gray-600 dark:hover:text-white">{{english|titlecase|translate}}</button>
                 </li>
-                <li class="nav-links flex gap-2">
-                    <img src="assets/flag/allemagne.png" alt="">
-                    <a href="#" class=" dark:hover:bg-gray-600 dark:hover:text-white">{{allemand|titlecase}}</a>
+                <li class="nav-links flex gap-2" (click)="changeLanguage('fr')">
+                    <img src="assets/flag/france.png" alt="">
+                    <button href="#" class=" dark:hover:bg-gray-600 dark:hover:text-white">{{french|titlecase|translate}}</button>
+                </li>
+                <li class="nav-links flex gap-2" (click)="changeLanguage('zh')">
+                    <img src="assets/flag/chine.png" alt="">
+                    <button class=" dark:hover:bg-gray-600 dark:hover:text-white">{{chinese|titlecase|translate}}</button>
+                </li>
+                <li class="nav-links flex gap-2" (click)="changeLanguage('sw')">
+                    <img src="assets/flag/angola.png" alt="">
+                    <button href="#" class=" dark:hover:bg-gray-600 dark:hover:text-white">{{swahili|titlecase|translate}}</button>
                 </li>
             </ul>
         </div>

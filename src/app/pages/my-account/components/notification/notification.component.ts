@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { CoreModule } from '../../../../core/core.module';
+import { TranslatePipe } from '@ngx-translate/core';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-notification',
   standalone: true,
-  imports: [CoreModule,RouterLink,RouterLinkActive
-  ],
+  imports: [RouterLink,RouterLinkActive,TranslatePipe],
   templateUrl: './notification.component.html',
   styleUrl: './notification.component.css'
 })
-export class NotificationComponent {
-
+export class NotificationComponent implements OnInit {
+  ngOnInit(): void {
+    initFlowbite();
+  }
 }

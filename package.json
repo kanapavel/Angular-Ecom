@@ -20,6 +20,8 @@
     "@angular/platform-browser": "^18.2.10",
     "@angular/platform-browser-dynamic": "^18.2.10",
     "@angular/router": "^18.2.10",
+    "@ngx-translate/core": "^16.0.3",
+    "@ngx-translate/http-loader": "^16.0.0",
     "apexcharts": "^4.0.0",
     "chart.js": "^4.4.6",
     "chartjs-plugin-datalabels": "^2.2.0",

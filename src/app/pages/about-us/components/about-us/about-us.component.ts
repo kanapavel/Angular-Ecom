@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 
 import { NgFor } from '@angular/common';
 import { CoreModule } from '../../../../core/core.module';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [CoreModule,NgFor],
+  imports: [CoreModule,NgFor,TranslatePipe],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
 })

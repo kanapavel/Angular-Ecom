@@ -8,13 +8,14 @@ import { RouterModule } from '@angular/router';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { FavoriesService } from '../../../../../core/services/favories.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-popular-products',
   standalone: true,
   imports: [
     NgIf,CurrencyPipe,NgClass,ViewModalComponent,RouterModule,
-    RatingModule,FormsModule
+    RatingModule,FormsModule,TranslatePipe
   ],
   templateUrl: './popular-products.component.html',
   styleUrl: './popular-products.component.css'

@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'count-down',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './count-down.component.html',
   styleUrl: './count-down.component.css'
 })

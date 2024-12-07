@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { FavoriesService } from '../../../../../core/services/favories.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-best-sell',
@@ -18,7 +19,7 @@ import { FavoriesService } from '../../../../../core/services/favories.service';
   imports: [
     NgStyle,NgFor,CurrencyPipe,NgIf,CountDownComponent,
     AsyncPipe,SlicePipe,NgClass,ViewModalComponent,RouterModule,
-    RatingModule,FormsModule
+    RatingModule,FormsModule,TranslatePipe
   ],
   templateUrl: './best-sell.component.html',
   styleUrl: './best-sell.component.css'

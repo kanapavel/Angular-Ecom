@@ -1,11 +1,12 @@
 import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-last-section',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,TranslatePipe],
   templateUrl: './last-section.component.html',
   styleUrl: './last-section.component.css'
 })

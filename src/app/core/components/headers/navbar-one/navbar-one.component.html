@@ -6,13 +6,13 @@
     </div>
     <div class="flex gap-5 max-lg:hidden">
         <form action="#" class="w-128 h-10">
-            <input type="search" id="search" placeholder="search for products"
+            <input type="search" id="search" placeholder="{{'search for products'|translate}}"
                 class="full-w-h boutton  border-grays-200 search">
         </form>
         <div class="location w-32">
             <button
                 class="w-full h-10 text-gray-ligth boutton border-grays-200  hover:bg-grays-300 hover:border-grays-300"
-                (click)="this.canShowModal=true">Location</button>
+                (click)="this.canShowModal=true">{{'Location'|translate}}</button>
         </div>
     </div>
     <div class="center-items w-32">
@@ -63,7 +63,7 @@
        
     <div class="flex flex-col gap-2 py-5">
         <form action="#" class="w-ful h-10">
-            <input type="search" id="search" placeholder="search for products"
+            <input type="search" id="recherche" placeholder="{{'search for products'|translate}}"
                 class="full-w-h boutton  border-grays-200 search">
         </form>
         <div class="location w-full">
@@ -74,7 +74,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>                  
-                Location
+                {{'Location'|translate}}
             </button>
         </div>
     </div>
@@ -85,136 +85,136 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
                     </svg>
-                    All Departments
+                    {{'All Departments'|translate}}
                 </button>
                 <ul id="dropdown-pages" class="hidden p-4 space-y-2 border border-grays-200 rounded-md mt-2">
-                    <li><a routerLink="../shop" lass="nav-links px-3">Dairy, Bread & Eggs</a></li>
-                    <li><a href="" class="nav-links px-3">Snacks & Munchies</a></li>
-                    <li><a href="" class="nav-links px-3">Fruits & Vegetables</a></li>
-                    <li><a href="" class="nav-links px-3">Cold Drinks & Juices</a></li>
-                    <li><a href="" class="nav-links px-3">Breakfasts & Instant Food</a></li>
-                    <li><a href="" class="nav-links px-3">Bakery & Biscuits</a></li>
-                    <li><a href="" class="nav-links px-3">Chicken, Meat & Fish</a></li>
+                    <li><a routerLink="../shop" lass="nav-links px-3">{{'Dairy, Bread & Eggs'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Snacks & Munchies'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Fruits & Vegetables'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Cold Drinks & Juices'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Breakfasts & Instant Food'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Bakery & Biscuits'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Chicken, Meat & Fish'|translate}}</a></li>
                 </ul>
             </li>
             <li>
                 <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages2" data-collapse-toggle="dropdown-pages2">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Home</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{'Home'|translate}}</span>
                     <svg aria-hidden="true" class="w-5 h-5 stroke-grays-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-pages2" class="hidden p-4 space-y-2 border border-grays-200 rounded-md mt-2">
-                    <li><a routerLink="/"  class="nav-links px-3">Home1</a></li>
-                    <li><a href="" class="nav-links px-3">Home2</a></li>
-                    <li><a href="" class="nav-links px-3">Home3</a></li>
-                    <li><a href="" class="nav-links px-3">Home4</a></li>
-                    <li><a href="" class="nav-links px-3">Home5</a></li>
+                    <li><a routerLink="/"  class="nav-links px-3">{{'Home1'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Home2'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Home3'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Home4'|translate}}</a></li>
+                    <li><a href="" class="nav-links px-3">{{'Home5'|translate}}</a></li>
                 </ul>
             </li>
             <li>
                 <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages3" data-collapse-toggle="dropdown-pages3">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Shop</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{'Shop'|translate}}</span>
                     <svg aria-hidden="true" class="w-5 h-5 stroke-grays-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-pages3" class="hidden p-4 border border-grays-200 rounded-md space-y-2 mt-2">
-                    <li><a routerLink="../shop" class="nav-links px-3">Shop Grid - Filter</a></li>
-                        <li><a href="" class="nav-links px-3">Shop Grid - 3 column</a></li>
-                        <li><a href="" class="nav-links px-3">Shop List - Filter</a></li>
-                        <li><a href="#" class="nav-links px-3">Shop - Filter</a></li>
-                        <li><a href="#" class="nav-links px-3">Shop Wide</a></li>
-                        <li><a href="#" class="nav-links px-3">Shop Single</a></li>
-                        <li><a href="#" class="nav-links px-3">Shop Single v2</a></li>
-                        <li><a href="#" class="nav-links px-3">Shop Wishlist</a></li>
-                        <li><a href="#" class="nav-links px-3">Shop Cart</a></li>
-                        <li><a href="#" class="nav-links px-3">Shop Checkout</a></li>
+                    <li><a routerLink="../shop" class="nav-links px-3">{{'Shop Grid - Filter'|translate}}</a></li>
+                        <li><a href="" class="nav-links px-3">{{'Shop Grid - 3 column'|translate}}</a></li>
+                        <li><a href="" class="nav-links px-3">{{'Shop List - Filter'|translate}}</a></li>
+                        <li><a href="#" class="nav-links px-3">{{'Shop - Filter'|translate}}</a></li>
+                        <li><a href="#" class="nav-links px-3">{{'Shop Wide'|translate}}</a></li>
+                        <li><a href="#" class="nav-links px-3">{{'Shop Single'|translate}}</a></li>
+                        <li><a href="#" class="nav-links px-3">{{'Shop Single v2'|translate}}</a></li>
+                        <li><a href="#" class="nav-links px-3">{{'Shop Wishlist'|translate}}</a></li>
+                        <li><a href="#" class="nav-links px-3">{{'Shop Cart'|translate}}</a></li>
+                        <li><a href="#" class="nav-links px-3">{{'Shop Checkout'|translate}}</a></li>
                 </ul>
             </li>
             <li>
                 <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages4" data-collapse-toggle="dropdown-pages4">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Stores</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{'Stores'|translate}}</span>
                     <svg aria-hidden="true" class="w-5 h-5 stroke-grays-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-pages4" class="hidden p-4 border border-grays-200 rounded-md space-y-2 mt-2">
-                    <li><a routerLink="/store" class="nav-links px-3">Store List</a></li>
-                        <li><a href="" class="nav-links px-3">Store Grid</a></li>
-                        <li><a href="" class="nav-links px-3">Store Single</a></li>
+                    <li><a routerLink="/store" class="nav-links px-3">{{'Store List'|translate}}</a></li>
+                        <li><a href="" class="nav-links px-3">{{'Store Grid'|translate}}</a></li>
+                        <li><a href="" class="nav-links px-3">{{'Store Single'|translate}}</a></li>
                 </ul>
             </li>
             <li>
                 <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages5" data-collapse-toggle="dropdown-pages5">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Mega menu</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{'Mega menu'|translate}}</span>
                     <svg aria-hidden="true" class="w-5 h-5 stroke-grays-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-pages5" class="hidden p-4 border border-grays-200 rounded-md space-y-2 mt-2">
                     <div class="grid gap-6">
                         <div class="flex flex-col">
-                            <h6 class="text-greens-800 text-base font-bold p-1 px-3">Dairy, Bread & Eggs</h6>
-                            <a routerLink="/shop" class="nav-links px-3">Butter</a>
-                            <a routerLink="/shop" class="nav-links px-3">Milk Drinks</a>
-                            <a routerLink="/shop" class="nav-links px-3">Curd & Yogurt</a>
-                            <a routerLink="/shop" class="nav-links px-3">Eggs</a>
-                            <a routerLink="/shop" class="nav-links px-3">Buns & Bakery</a>
-                            <a routerLink="/shop" class="nav-links px-3">Cheese</a>
-                            <a routerLink="/shop" class="nav-links px-3">Condensed Milk</a>
-                            <a routerLink="/shop" class="nav-links px-3">Dairy Products</a>
+                            <h6 class="text-greens-800 text-base font-bold p-1 px-3">{{'Dairy, Bread & Eggs'|translate}}</h6>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Butter'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Milk Drinks'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Curd & Yogurt'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Eggs'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Buns & Bakery'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Cheese'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Condensed Milk'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Dairy Products'|translate}}</a>
                         </div>
                         <div class="flex flex-col">
-                            <h6 class="text-greens-800 text-base font-bold p-1 px-3">Breakfasts & Instant Food</h6>
-                            <a routerLink="/shop" class="nav-links px-3">Breakfasts Cereal</a>
-                            <a routerLink="/shop" class="nav-links px-3">Noodles, Pasta & Soup</a>
-                            <a routerLink="/shop" class="nav-links px-3">Frozen Veg Snacks</a>
-                            <a routerLink="/shop" class="nav-links px-3">Frozen Non-Veg Snacks</a>
-                            <a routerLink="/shop" class="nav-links px-3">Vermicelli</a>
-                            <a routerLink="/shop" class="nav-links px-3">Instant Mixes</a>
-                            <a routerLink="/shop" class="nav-links px-3">Batter</a>
-                            <a routerLink="/shop" class="nav-links px-3">Fruits and Juices</a>
+                            <h6 class="text-greens-800 text-base font-bold p-1 px-3">{{'Breakfasts & Instant Food'|translate}}</h6>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Breakfasts Cereal'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Noodles, Pasta & Soup'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Frozen Veg Snacks'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Frozen Non-Veg Snacks'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Vermicelli'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Instant Mixes'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Batter'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Fruits and Juices'|translate}}</a>
                         </div>
                         <div class="flex flex-col">
-                            <h6 class="text-greens-800 text-base font-bold p-1 px-3">Cold Drinks & Juices</h6>
-                            <a routerLink="/shop" class="nav-links px-3">Soft Drinks</a>
-                            <a routerLink="/shop" class="nav-links px-3">Fruits Juices</a>
-                            <a routerLink="/shop" class="nav-links px-3">Coldpress</a>
-                            <a routerLink="/shop" class="nav-links px-3">Water & Ice Cubes</a>
-                            <a routerLink="/shop" class="nav-links px-3">Soda & Mixers</a>
-                            <a routerLink="/shop" class="nav-links px-3">Health Drinks</a>
-                            <a routerLink="/shop" class="nav-links px-3">Herbal Drinks</a>
-                            <a routerLink="/shop" class="nav-links px-3">Milk Drinks</a>
+                            <h6 class="text-greens-800 text-base font-bold p-1 px-3">{{'Cold Drinks & Juices'|translate}}</h6>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Soft Drinks'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Fruits Juices'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Coldpress'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Water & Ice Cubes'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Soda & Mixers'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Health Drinks'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Herbal Drinks'|translate}}</a>
+                            <a routerLink="/shop" class="nav-links px-3">{{'Milk Drinks'|translate}}</a>
                         </div>
                         <div class="bg-[url('assets/menu-banner.jpg')] bg-cover bg-center px-4 h-60" >
-                            <p class="my-5 font-bold text-blacks">Dont miss this <br>offer today.</p>
-                            <a href="#" class="boutton border-none text-small bg-greens-800 hover:bg-green-hover text-whites">Shop Now</a>
+                            <p class="my-5 font-bold text-blacks w-40">{{'Dont miss this offer today.'|translate}}</p>
+                            <a href="#" class="boutton border-none text-small bg-greens-800 hover:bg-green-hover text-whites">{{'Shop Now'|translate}}</a>
                         </div>
                     </div>
                 </ul>
             </li>
             <li>
                 <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages6" data-collapse-toggle="dropdown-pages6">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Pages</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{'Pages'|translate}}</span>
                     <svg aria-hidden="true" class="w-5 h-5 stroke-grays-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-pages6" class="hidden p-4 border border-grays-200 rounded-md space-y-2 mt-2">
-                    <li><a routerLink="/about-us" class="nav-links px-3">About us</a></li>
-                    <li><a routerLink="/404Error" class="nav-links px-3">404 Error</a></li>
-                    <li><a routerLink="/contact" class="nav-links px-3">Contact</a></li>
+                    <li><a routerLink="/about-us" class="nav-links px-3">{{'About us'|translate}}</a></li>
+                    <li><a routerLink="/404Error" class="nav-links px-3">{{'404 Error'|translate}}</a></li>
+                    <li><a routerLink="/contact" class="nav-links px-3">{{'Contact'|translate}}</a></li>
                 </ul>
             </li>
             <li>
                 <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages7" data-collapse-toggle="dropdown-pages7">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Account</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{'Account'|translate}}</span>
                     <svg aria-hidden="true" class="w-5 h-5 stroke-grays-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-pages7" class="hidden p-4 border border-grays-200 rounded-md space-y-2 mt-2">
-                    <li><a routerLink="/signin" class="nav-links px-3">Sign in</a></li>
-                    <li><a routerLink="/signup" class="nav-links px-3">Sign up</a></li>
-                    <li><a routerLink="/forgotpwd" class="nav-links px-3">Forgot Password</a></li>
-                    <li><a routerLink="/notification" class="nav-links px-3 justify-between items-center">My Account</a></li>
+                    <li><a routerLink="/signin" class="nav-links px-3">{{'Sign in'|translate}}</a></li>
+                    <li><a routerLink="/signup" class="nav-links px-3">{{'Sign up'|translate}}</a></li>
+                    <li><a routerLink="/forgotpwd" class="nav-links px-3">{{'Forgot Password'|translate}}</a></li>
+                    <li><a routerLink="/account/notification" class="nav-links px-3 justify-between items-center">{{'My Account'|translate}}</a></li>
                 </ul>
             </li>
             <li>
-                <a routerLink="/dashboard" class="center-items relative text-base hover:text-greens-800 p-2 ml-3">Dashboard</a>
+                <a routerLink="/dashboard" class="center-items relative text-base hover:text-greens-800 p-2 ml-3">{{'Dashboard'|translate}}</a>
             </li>
             <li>
                 <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-pages8" data-collapse-toggle="dropdown-pages8">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Docs</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{'Docs'|translate}}</span>
                     <svg aria-hidden="true" class="w-5 h-5 stroke-grays-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-pages8" class="hidden p-4 border border-grays-200 rounded-md space-y-2 mt-2">
@@ -226,8 +226,8 @@
                                 </svg>                                  
                             </div>
                             <div>
-                                <h6 class="font-bold text-blacks">Documentations</h6>
-                                <p class="text-small">Browse the all documentation</p>
+                                <h6 class="font-bold text-blacks">{{'Documentations'|translate}}</h6>
+                                <p class="text-small">{{'Browse the all documentation'|translate}}</p>
                             </div>
                         </a>
                     </li>
@@ -239,8 +239,8 @@
                                 </svg>                                                              
                             </div>
                             <div>
-                                <h6 class="font-bold text-blacks">Changelog <span class="text-greens-800">v1.3.0</span></h6>
-                                <p class="text-small">see what's new</p>
+                                <h6 class="font-bold text-blacks">{{'Changelog'|translate}} <span class="text-greens-800">v1.3.0</span></h6>
+                                <p class="text-small">{{"see what's new"|translate}}</p>
                             </div>
                         </a>
                     </li>

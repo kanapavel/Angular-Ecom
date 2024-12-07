@@ -2,16 +2,16 @@
 <app-navbar-one />
 <app-navbar-two />
 <div class="flex gap-5 mt-4 px-20 max-sm:px-6">
-    <a href="" class="text-greens-800">Home</a>
+    <a href="" class="text-greens-800">{{'Home'|translate}}</a>
     <li class="list-none text-gray-ligth">/</li>
-    <a href="" class="text-greens-800">Stores</a>
-    <li class="list-none text-gray-ligth">/ Store List</li>
+    <a href="" class="text-greens-800">{{'Stores'|translate}}</a>
+    <li class="list-none text-gray-ligth">/ {{'Store List'|translate}}</li>
 </div>
 
 <section class="mt-8 px-20 max-sm:px-6">
     <div class="flex justify-between items-center bg-grays-100 rounded-md">
         <div class="pl-12">
-            <h1 class="text-ld font-bold max-sm:text-xl">Stores</h1>
+            <h1 class="text-ld font-bold max-sm:text-xl">{{'Stores'|translate}}</h1>
         </div>
         <div class="py-6">
             <img src="assets/img-storelist/store-graphics.svg" alt="">
@@ -21,28 +21,32 @@
 
 <section class="px-20 mt-5 mb-20 max-sm:px-6">
     <div>
-        <h6 class="font-semibold mb-4">We have <span class="text-greens-800">36 </span>vendors now</h6>
+        <h6 class="font-semibold mb-4">{{'We have'|translate}} <span class="text-greens-800">36 </span>{{'vendors now'|translate}}</h6>
     </div>
     <div  class="grid grid-cols-3 gap-4 max-lg:grid-cols-2 max-md:grid-cols-1">
         <div *ngFor="let storeProduct of storeList" class="flex p-8 border border-grays-200 rounded-md hover:border-greens-800 hover:shadow-lg transition-all ease-in-out duration-300">
-            <div>
+            <div class="w-1/5">
                 <img class="w-12 h-12 rounded-full" [src]="storeProduct.img" alt="">
             </div>
-            <div class="ml-6">
-                <h5 class="mb-1 font-semibold text-lg hover:text-green-hover"><a href="">{{storeProduct.title}}</a></h5>
+            <div class="ml-6 w-4/5">
+                <h5 class="mb-1 font-semibold text-lg hover:text-green-hover"><a href="">{{storeProduct.title|translate}}</a></h5>
                 <div class="flex items-center gap-1.5 text-gray-ligth">
-                    <span class="text-small">{{storeProduct.text1}}</span>
+                    <span class="text-small">{{storeProduct.text1|translate}}</span>
                     <div class="w-1 h-1 rounded-full bg-grays-300"></div>
-                    <span class="text-small">{{storeProduct.text2}}</span>
+                    <span class="text-small">{{storeProduct.text2|translate}}</span>
                     @if(storeProduct.text3){
                         <div class="w-1 h-1 rounded-full bg-grays-300"></div>
-                        <span class="text-small">{{storeProduct.text3}}</span>
+                        <span class="text-small">{{storeProduct.text3|translate}}</span>
                     }
                 </div>
                 <div class="text-small py-3 text-gray-ligth font-semibold">
-                    <li>{{storeProduct.textOffTime}}</li>
-                    <li class="text-greens-800">{{storeProduct.textWithTime}}</li>
-                    <li>{{storeProduct.description}}</li>
+                    @if(storeProduct.textOffTime){
+                        <li>{{storeProduct.textOffTime|translate}}</li>
+                    }
+                    @if (storeProduct.textWithTime) {
+                        <li class="text-greens-800">{{storeProduct.textWithTime|translate}}</li>
+                    }
+                    <li>{{storeProduct.description|translate}}</li>
                 </div>
                 <div class="flex items-center gap-3 text-bigSmall font-bold">
                     <div class="bg-grays-100 px-1.5 py-1 rounded-md">{{storeProduct.distance}}</div>
@@ -50,6 +54,15 @@
                         <div class="bg-grays-100 px-1.5 py-1 rounded-md">{{storeProduct.store}}</div>
                     }
                 </div>
+                <!-- <div class="flex flex-col items-end gap-2 mt-5">
+                    <div class="w-2/5">
+                        <input type="number" id="qte" min="0" max="20" placeholder="0" class="search text-small rounded-md p-1">
+                        <div class="mb-1">
+                            <span class="font-semibold">Price:</span>
+                            200$
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>

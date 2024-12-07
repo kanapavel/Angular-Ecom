@@ -1,10 +1,11 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 import { CommonModule, NgIf, TitleCasePipe } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-location-popup',
   standalone: true,
-  imports: [CommonModule,TitleCasePipe,NgIf],
+  imports: [CommonModule,TitleCasePipe,NgIf,TranslatePipe],
   templateUrl: './location-popup.component.html',
   styleUrl: './location-popup.component.css'
 })

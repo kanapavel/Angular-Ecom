@@ -8,6 +8,7 @@ import { FeaturedSectionComponent } from './components/featured-categories/featu
 import { LastSectionComponent } from './components/last-section/last-section.component';
 import { PopularProductsComponent } from './components/popular-products/popular-products/popular-products.component';
 import { SectionOneComponent } from './components/first-section/section-one/section-one.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 
@@ -19,7 +20,7 @@ import { SectionOneComponent } from './components/first-section/section-one/sect
     NgFor,
     CoreModule,BestSellComponent,
     FeaturedSectionComponent,LastSectionComponent,
-    PopularProductsComponent,SectionOneComponent,AsyncPipe
+    PopularProductsComponent,SectionOneComponent,AsyncPipe,TranslatePipe
 ],
   templateUrl: './Home.component.html',
 })
