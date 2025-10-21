@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor, NgStyle } from '@angular/common';
+import { CurrencyPipe, NgFor, NgStyle } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CurrencyService } from '../../../../../core/services/currency.service';
 
 
 
 @Component({
   selector: 'app-section-one',
   standalone: true,
-  imports: [NgFor,NgStyle,TranslatePipe],
+  imports: [NgFor,NgStyle,TranslatePipe,CurrencyPipe],
   templateUrl: './section-one.component.html',
   styleUrl: './section-one.component.css'
 })
 export class SectionOneComponent implements OnInit{
-
-  constructor(){}
+  selectedCurrency!:string;
+  constructor(private currencyService:CurrencyService){}
 
    data = [
     {
@@ -44,6 +45,14 @@ export class SectionOneComponent implements OnInit{
     },
    ]
 
-   ngOnInit(): void {}
+   ngOnInit(): void {
+    this.currencyService.getSelectedSymbol().subscribe(symbol=>{
+      this.selectedCurrency = symbol
+    })
+   }
+
+   convertPrice(price:number){
+    return this.currencyService.convertPrice(price);
+   }
 
 }

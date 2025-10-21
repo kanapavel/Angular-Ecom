@@ -26,7 +26,7 @@
                 <li class="w-full hover:bg-grays-100 focus-within:bg-grays-100">
                     <a class="center-items px-2 py-3 border-b" href="#">
                         <span>{{area.name | titlecase}}</span>
-                        <span>{{'Min'|translate}}:${{area.price}}</span>
+                        <span>{{'Min'|translate}}{{ convertPrice(area.price) | currency:selectedCurrency:'symbol':'1.0-0'}}</span>
                     </a>
                 </li>
             </ul>

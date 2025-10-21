@@ -111,10 +111,8 @@
 
         <div class="mt-4 flex items-center justify-between gap-4">
             <div class="flex gap-1">
-                <p class="text-base text-gray-900 dark:text-white">{{ data.prix_reduit | currency:'USD':'symbol':'1.0-0'
-                    }}</p>
-                <p class="text-base text-grays-300 line-through dark:text-white">{{ data.prix_unitaire |
-                    currency:'USD':'symbol':'1.0-0' }}</p>
+                <p class="text-base text-gray-900 dark:text-white">{{ convertPrice(data.prix_reduit) | currency:selectedCurrency:'symbol':'1.0-0'}}</p>
+                <p class="text-base text-grays-300 line-through dark:text-white">{{ convertPrice(data.prix_unitaire) | currency:selectedCurrency:'symbol':'1.0-0'}}</p>
             </div>
 
             <button type="button" (click)="toggleAddCart(data)" [ngClass]="{'active':isInCart(data)}"

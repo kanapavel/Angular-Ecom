@@ -75,10 +75,10 @@
                                 </div>
                             </form>
         
-                            <div class="flex flex-col gap-2 w-10">
-                                <span *ngIf="item.prix_reduit !== 20" class="text-blacks font-semibold">{{item.prix_reduit | currency:'USD':'symbol'}}</span>
-                                <span *ngIf="item.prix_reduit === 20" class="text-reds font-semibold">{{item.prix_reduit | currency:'USD':'symbol'}}</span>
-                                <span class="line-through">{{item.prix_unitaire | currency:'USD':'symbol'}}</span>
+                            <div class="flex flex-col gap-2 w-12">
+                                <span *ngIf="item.prix_reduit !== 20" class="text-blacks font-semibold">{{ convertPrice(item.prix_reduit) | currency:selectedCurrency:'symbol':'1.0-0'}}</span>
+                                <span *ngIf="item.prix_reduit === 20" class="text-reds font-semibold">{{ convertPrice(item.prix_reduit) | currency:selectedCurrency:'symbol':'1.0-0'}}</span>
+                                <span class="line-through">{{ convertPrice(item.prix_unitaire) | currency:selectedCurrency:'symbol':'1.0-0'}}</span>
                             </div>
                         </div>
         
@@ -128,7 +128,7 @@
             </div>
             <div *ngIf="data.length !== 0" class="flex gap-2 text-lg mt-3">
                 <h1 class="font-bold">{{'Total'|translate}}:</h1>
-                <span>{{totalAmount}}$</span>
+                <span>{{convertPrice(totalAmount) | currency:selectedCurrency:'symbol':'1.0-0'}}</span>
             </div>
             <div *ngIf="data.length !== 0" >
                 <div class="flex justify-between items-center mt-4">

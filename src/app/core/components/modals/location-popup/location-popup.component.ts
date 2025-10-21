@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 import { CommonModule, NgIf, TitleCasePipe } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CurrencyService } from '../../../services/currency.service';
 
 @Component({
   selector: 'app-location-popup',
@@ -16,9 +17,9 @@ export class LocationPopupComponent implements OnInit {
   
   @Output('close')
   onClose = new EventEmitter()
-
+  selectedCurrency!:string
   
-  constructor(){}
+  constructor(private currencyService:CurrencyService){}
   
   area = [
     {
@@ -48,6 +49,9 @@ export class LocationPopupComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+    this.currencyService.getSelectedSymbol().subscribe(symbol=>{
+      this.selectedCurrency = symbol
+    })
   }
   onCloseModalOusideClick(event:MouseEvent){
     const targetElement = event.target as HTMLElement;
@@ -55,4 +59,7 @@ export class LocationPopupComponent implements OnInit {
       this.onClose.emit()
     }
   }
+  convertPrice(price:number){
+    return this.currencyService.convertPrice(price);
+   }
 }

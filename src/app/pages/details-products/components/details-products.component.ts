@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { PopularProductsComponent } from '../../home/components/popular-products/popular-products/popular-products.component';
 import { FavoriesService } from '../../../core/services/favories.service';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CurrencyService } from '../../../core/services/currency.service';
 
 @Component({
   selector: 'app-details-products',
@@ -26,8 +27,11 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class DetailsProductsComponent implements OnInit{
   item!:products;
   allProducts!:products[]
+  selectedCurrency!:string
+
   constructor(private productService:ProductsService, private activeRoute:ActivatedRoute,
-    private cartService:CartService,private favorieService:FavoriesService){}
+    private cartService:CartService,private favorieService:FavoriesService,private currencyService:CurrencyService){}
+
   ngOnInit(): void {
     let id = this.activeRoute.snapshot.paramMap.get('id');
     id && this.productService.getProductById(id).subscribe((result)=>{
@@ -35,6 +39,9 @@ export class DetailsProductsComponent implements OnInit{
     })
     this.productService.getAllProducts().subscribe((res)=>{
       this.allProducts = res
+    })
+    this.currencyService.getSelectedSymbol().subscribe(symbol=>{
+      this.selectedCurrency = symbol
     })
   }
 
@@ -71,4 +78,7 @@ export class DetailsProductsComponent implements OnInit{
      product.quantite--
     }
   }
+  convertPrice(price:number){
+    return this.currencyService.convertPrice(price);
+   }
 }

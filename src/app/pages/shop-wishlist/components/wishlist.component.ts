@@ -6,6 +6,7 @@ import { CurrencyPipe, NgClass, NgFor } from '@angular/common';
 import { CartService } from '../../../core/services/cart.service';
 import { RouterModule } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CurrencyService } from '../../../core/services/currency.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -16,7 +17,11 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class WishlistComponent implements OnInit{
   items:products[]=[]
-  constructor(private favorieService:FavoriesService,private cartService:CartService){}
+  selectedCurrency!:string
+  
+  constructor(private favorieService:FavoriesService,private cartService:CartService,
+    private currencyService:CurrencyService
+  ){}
 
   ngOnInit(): void {
     this.favorieService.getProducts().subscribe(res=>{
@@ -36,20 +41,10 @@ export class WishlistComponent implements OnInit{
         }
       })
     }
+    this.currencyService.getSelectedSymbol().subscribe(symbol=>{
+      this.selectedCurrency = symbol
+    })
   }
-
-  // @ViewChild('checkAll') checkAll!:ElementRef<HTMLInputElement>
-  // @ViewChild('checkboxItems') checkbox!:ElementRef<HTMLInputElement>
-
-  // ngAfterViewInit(): void {
-  //   this.checkAll.nativeElement.addEventListener('click',()=>{
-  //     if(this.checkbox.nativeElement.checked){
-  //       this.checkbox.nativeElement.setAttribute('checked','true');
-  //     }else{
-  //       this.checkbox.nativeElement.removeAttribute('checked')
-  //     }
-  //   })
-  // }
 
   removeToWishlist(item:products){
     this.favorieService.removeFavorieItem(item)
@@ -67,4 +62,7 @@ export class WishlistComponent implements OnInit{
   isInCart(product:products):boolean{
     return this.cartService.isInCart(product)
   }
+  convertPrice(price:number){
+    return this.currencyService.convertPrice(price);
+   }
 }

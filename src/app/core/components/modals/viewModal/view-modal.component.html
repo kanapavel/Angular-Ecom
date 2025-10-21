@@ -53,8 +53,8 @@ class="bg-modals overflow-y-auto ">
                         <a href="" class="text-greens-800">({{item.commentaires.length}} {{'reviews'|translate}})</a>
                     </div>
                     <div class="flex gap-3 items-center">
-                        <span class="text-blacks text-xl font-bold">${{item.prix_reduit}}</span>
-                        <span class="text-grays-300 text-xl font-medium line-through">${{item.prix_unitaire}}</span>
+                        <span class="text-blacks text-xl font-bold">{{ convertPrice(item.prix_reduit) | currency:selectedCurrency:'symbol':'1.0-0'}}</span>
+                        <span class="text-grays-300 text-xl font-medium line-through">{{ convertPrice(item.prix_unitaire) | currency:selectedCurrency:'symbol':'1.0-0'}}</span>
                         <small class="text-reds text-base">{{item.remise}} {{'Off'|translate}}</small>
                     </div>
                     <hr class="w-full h-1 my-6">

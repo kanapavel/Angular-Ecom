@@ -1,7 +1,14 @@
 <div class="flex justify-between items-center px-20 h-8 bg-background text-base text-gray-ligth max-sm:px-6 max-sm:justify-center">
     <p>{{text | translate}}</p>
-    <div class="max-sm:hidden">
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-grays-800 hover:text-greens-800 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+    <div class="flex items-center gap-5 max-sm:hidden">
+        <div>
+            <form class="max-w-sm mx-auto">
+                <select  (change)="onChangeCurrency($event)" class="block py-0 px-0 w-full text-small text-gray-500 bg-transparent border-0 border-b-0 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                    <option *ngFor="let currency of currencies">{{currency}}</option>
+                </select>
+            </form>
+        </div>
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-grays-800 hover:text-greens-800 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center" type="button">
             @if (userLanguage === "en") {
                 <img src="assets/flag/royaume-uni.png" alt="" class="mr-1">
                 {{english | titlecase|translate}} 
@@ -21,21 +28,21 @@
         </button>
 
         <!-- Dropdown menu -->
-        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-700">
+        <div id="dropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-700">
             <ul class="p-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                <li class="nav-links flex gap-2" (click)="changeLanguage('en')">
+                <li class="nav-links flex gap-2" (click)="onChangeLanguage('en')">
                     <img src="assets/flag/royaume-uni.png" alt="">
                     <button class=" dark:hover:bg-gray-600 dark:hover:text-white">{{english|titlecase|translate}}</button>
                 </li>
-                <li class="nav-links flex gap-2" (click)="changeLanguage('fr')">
+                <li class="nav-links flex gap-2" (click)="onChangeLanguage('fr')">
                     <img src="assets/flag/france.png" alt="">
                     <button href="#" class=" dark:hover:bg-gray-600 dark:hover:text-white">{{french|titlecase|translate}}</button>
                 </li>
-                <li class="nav-links flex gap-2" (click)="changeLanguage('zh')">
+                <li class="nav-links flex gap-2" (click)="onChangeLanguage('zh')">
                     <img src="assets/flag/chine.png" alt="">
                     <button class=" dark:hover:bg-gray-600 dark:hover:text-white">{{chinese|titlecase|translate}}</button>
                 </li>
-                <li class="nav-links flex gap-2" (click)="changeLanguage('sw')">
+                <li class="nav-links flex gap-2" (click)="onChangeLanguage('sw')">
                     <img src="assets/flag/angola.png" alt="">
                     <button href="#" class=" dark:hover:bg-gray-600 dark:hover:text-white">{{swahili|titlecase|translate}}</button>
                 </li>

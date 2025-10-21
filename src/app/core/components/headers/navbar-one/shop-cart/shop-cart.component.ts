@@ -5,6 +5,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { CartService } from '../../../../services/cart.service';
 import { products } from '../../../../interfaces/products';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CurrencyService } from '../../../../services/currency.service';
 
 @Component({
   selector: 'shop-cart',
@@ -23,14 +24,18 @@ export class ShopCartComponent implements OnInit {
   totalItems:number = 0;
   data:products[]=[];
   totalAmount:number=0;
+  selectedCurrency!:string
   
-  constructor(private cartService:CartService){}
+  constructor(private cartService:CartService,private currencyService:CurrencyService){}
 
   ngOnInit(): void {
     this.cartService.getProducts().subscribe(res=>{
       this.totalItems = res.length;
       this.data = res
       this.totalAmount = this.getTotal(this.data)
+    })
+    this.currencyService.getSelectedSymbol().subscribe(symbol=>{
+      this.selectedCurrency = symbol
     })
   }
 
@@ -64,4 +69,7 @@ export class ShopCartComponent implements OnInit {
     })
     return total
   }
+  convertPrice(price:number){
+    return this.currencyService.convertPrice(price);
+   }
 }

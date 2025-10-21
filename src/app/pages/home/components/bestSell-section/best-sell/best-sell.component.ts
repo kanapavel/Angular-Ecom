@@ -12,6 +12,7 @@ import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { FavoriesService } from '../../../../../core/services/favories.service';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CurrencyService } from '../../../../../core/services/currency.service';
 
 @Component({
   selector: 'app-best-sell',
@@ -28,13 +29,19 @@ export class BestSellComponent implements OnInit{
   isAdded = false;
   canShowModal = false;
   produits:products[]=[]
-  constructor(private productService:ProductsService,private cartService:CartService,private favorieService:FavoriesService){}
+  selectedCurrency!:string
+
+  constructor(private productService:ProductsService,private cartService:CartService,
+    private favorieService:FavoriesService,private currencyService:CurrencyService){}
 
   Products!:products 
   ngOnInit(): void {
     initFlowbite();
     this.productService.getAllProducts().subscribe(res=>{
       this.produits = res
+    })
+    this.currencyService.getSelectedSymbol().subscribe(symbol=>{
+      this.selectedCurrency = symbol
     })
   }
   toggleAddCart(product:products){
@@ -65,4 +72,8 @@ export class BestSellComponent implements OnInit{
     this.Products = product
     this.canShowModal =true
   }
+  convertPrice(price:number){
+    return this.currencyService.convertPrice(price);
+   }
+
 }

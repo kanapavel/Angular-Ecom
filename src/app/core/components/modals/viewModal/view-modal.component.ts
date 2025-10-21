@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import{CommonModule, NgClass, NgFor, NgIf, TitleCasePipe} from '@angular/common';
 import { products } from '../../../interfaces/products';
 import { EventEmitter } from '@angular/core';
@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { FavoriesService } from '../../../services/favories.service';
 import { RouterModule } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CurrencyService } from '../../../services/currency.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './view-modal.component.html',
   styleUrl: './view-modal.component.css'
 })
-export class ViewModalComponent{
+export class ViewModalComponent implements OnInit{
     @Input('showModal')
     showModal = false;
     @Input('item') 
@@ -25,9 +26,18 @@ export class ViewModalComponent{
 
     @Output('close')
     onClose = new EventEmitter()
+    selectedCurrency!:string
 
-    constructor(private cartService:CartService,private favorieService:FavoriesService){}
+    constructor(private cartService:CartService,private favorieService:FavoriesService,
+      private currencyService:CurrencyService
+    ){}
     
+    ngOnInit(): void {
+      this.currencyService.getSelectedSymbol().subscribe(symbol=>{
+        this.selectedCurrency = symbol
+      })
+    }
+
     onCloseModalOusideClick(event:MouseEvent){
         const targetElement = event.target as HTMLElement;
         if (targetElement.classList.contains('bg-modals')){
@@ -69,4 +79,7 @@ export class ViewModalComponent{
        product.quantite--
       }
     }
+    convertPrice(price:number){
+      return this.currencyService.convertPrice(price);
+     }
 }

@@ -63,7 +63,7 @@
                         <span>{{item.poids[0]}}</span>
                     </td>
                     <td class="px-6 py-4">
-                        {{item.prix_reduit|currency:'USD'}}
+                        {{ convertPrice(item.prix_reduit) | currency:selectedCurrency:'symbol':'1.0-0'}}
                     </td>
                     <td class="px-6 py-4">
                         @if (item.stock) {
